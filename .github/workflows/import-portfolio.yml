@@ -1,0 +1,56 @@
+name: Import Portfolio
+
+on:
+  push:
+    paths:
+      - ".github/workflows/import-portfolio.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Open repository
+        uses: actions/checkout@v4
+
+      - name: Download portfolio files
+        env:
+          SITE: https://navjot-analytics.nav44594.chatgpt.site
+        run: |
+          set -eu
+
+          curl -fLsS --retry 3 "$SITE/" -o index.html
+          curl -fLsS --retry 3 "$SITE/style.css" -o style.css
+          curl -fLsS --retry 3 "$SITE/Navjot-Singh-Resume.pdf" -o Navjot-Singh-Resume.pdf
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          html = Path("index.html").read_text()
+          assert "QuickBite Express" in html, "Portfolio download failed"
+          assert "navjotaroundai@gmail.com" in html, "Unexpected page downloaded"
+          assert "--bg" in Path("style.css").read_text(), "Stylesheet download failed"
+          assert Path("Navjot-Singh-Resume.pdf").read_bytes().startswith(b"%PDF-"), "Resume download failed"
+          PY
+
+          touch .nojekyll
+
+      - name: Save portfolio
+        run: |
+          set -eu
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add index.html style.css Navjot-Singh-Resume.pdf .nojekyll
+
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+
+          git commit -m "Add professional portfolio and resume"
+          git push
