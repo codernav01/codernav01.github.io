@@ -71,7 +71,7 @@ jobs:
               # Medium often embeds the lead image in content:encoded.
               content = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
               if content is not None and content.text:
-                  match = re.search(r"<img[^>]+src=['""]([^'""]+)['""]", content.text, re.I)
+                  match = re.search(r"<img[^>]+src=[\"']([^\"']+)[\"']", content.text, re.I)
                   if match and match.group(1).startswith("https://"):
                       return html.unescape(match.group(1))
               return ""
