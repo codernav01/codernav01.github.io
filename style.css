@@ -63,3 +63,51 @@
 @keyframes research-pulse{0%,100%{box-shadow:0 0 0 3px #9faee11a;opacity:.85}50%{box-shadow:0 0 0 6px #9faee122;opacity:1}}
 @media(max-width:760px){.upcoming-grid{grid-template-columns:1fr;gap:30px}.research-teaser{padding:24px 20px}.research-teaser h3{font-size:28px}}
 @media(prefers-reduced-motion:reduce){.pulse-dot{animation:none}}
+
+/* Premium research feature visual */
+.research-visual-section{max-width:1490px;margin:0 auto 90px;padding:0 32px}
+.research-visual-panel{position:relative;display:grid;grid-template-columns:minmax(280px,.78fr) minmax(0,1.22fr);min-height:560px;overflow:hidden;border:1px solid #3a4556;border-radius:5px;background:radial-gradient(ellipse at 85% 35%,#173451 0%,#101923 43%,#0c1118 100%);box-shadow:0 22px 70px #0003}
+.visual-copy{position:relative;z-index:2;align-self:center;padding:54px 10px 54px 46px}
+.visual-overline{font-size:10px;letter-spacing:1.8px;color:#9cb9ef}
+.visual-copy h3{font-size:clamp(30px,3.1vw,48px);line-height:1.12;letter-spacing:-1.4px;margin:19px 0 16px;color:#f0f3fb}
+.visual-copy h3 em{font-style:normal;color:#86b9ff}
+.visual-copy>p{max-width:330px;font-size:14px;line-height:1.8;color:#aebbd0}
+.visual-pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:25px}
+.visual-pills span{font-size:10px;border:1px solid #354961;color:#c8d8f0;padding:7px 9px;border-radius:3px}
+.visual-scene{position:relative;min-height:560px;overflow:hidden;background:linear-gradient(130deg,#172535,#0b1017 68%);isolation:isolate}
+.scene-glow{position:absolute;width:420px;height:420px;right:5%;top:6%;border-radius:50%;background:#167bd522;filter:blur(32px)}
+.scene-window{position:absolute;z-index:2;top:11%;right:7%;width:70%;padding:17px;border:1px solid #3d6588;border-radius:9px;background:linear-gradient(145deg,#121e2b,#080d13);box-shadow:0 25px 55px #0008;transform:perspective(900px) rotateY(-5deg) rotateX(2deg)}
+.window-top{display:flex;align-items:center;gap:5px;padding-bottom:13px;border-bottom:1px solid #253548}
+.window-top>span{width:6px;height:6px;border-radius:50%;background:#66829f}
+.window-top b{margin-left:auto;font-size:8px;letter-spacing:1.5px;color:#7996b9;font-weight:500}
+.window-heading{font-size:15px;font-weight:600;color:#e9f1fc;margin:15px 0}
+.dashboard-row{display:grid;grid-template-columns:.7fr 1.3fr;gap:10px}
+.risk-score,.chart-box,.explain-box{border:1px solid #26394d;border-radius:4px;background:#0d1722;padding:12px}
+.risk-score small,.chart-box small,.explain-box>small{display:block;font-size:8px;letter-spacing:1px;color:#92a9c5}
+.risk-score strong{display:block;font-size:31px;letter-spacing:-1px;color:#ff7d91;margin:7px 0 4px}
+.risk-score span{font-size:8px;letter-spacing:1px;color:#ff9eac}
+.chart-box svg{width:100%;height:61px;margin-top:5px}
+.explain-box{margin-top:10px}
+.explain-box>div{display:grid;grid-template-columns:1fr minmax(30px,.8fr) 36px;gap:8px;align-items:center;margin-top:12px;font-size:8px;color:#c1d0e2}
+.explain-box i{height:5px;width:var(--bar);background:linear-gradient(90deg,#3d8bff,#72d3ff);border-radius:8px;display:block}
+.explain-box b{font-size:8px;color:#9bdcff;text-align:right}
+.book-stack{position:absolute;z-index:3;left:3%;bottom:24%;width:42%;transform:rotate(-4deg)}
+.book-stack div{padding:12px 15px;margin-top:3px;border:1px solid #3b536a;border-left:4px solid #7da4d8;border-radius:3px;background:linear-gradient(100deg,#20364a,#111d2a);box-shadow:0 8px 14px #0005;color:#d8e6f8;font-size:10px;letter-spacing:.3px}
+.book-stack div:nth-child(2){margin-left:10px;border-left-color:#67c5d6}
+.book-stack div:nth-child(3){margin-left:19px;border-left-color:#b1a1e8}
+.research-notebook{position:absolute;z-index:4;left:2%;bottom:5%;width:43%;padding:17px 15px;background:linear-gradient(135deg,#e5e8ed,#bbc7d5);color:#26374c;box-shadow:0 14px 25px #0007;transform:rotate(-7deg);border-radius:2px}
+.research-notebook>span{font-family:Georgia,serif;font-style:italic;font-size:12px;font-weight:bold}
+.research-notebook p{font-family:Georgia,serif;font-size:9px;margin:10px 0 0;border-bottom:1px solid #aebaca;padding-bottom:5px}
+.pen{position:absolute;width:8px;height:130px;right:13%;top:5%;border-radius:5px;background:linear-gradient(90deg,#1a2d42,#7198be,#172638);transform:rotate(38deg);box-shadow:2px 3px 5px #0004}
+.paper-cover{position:absolute;z-index:5;right:5%;bottom:5%;width:43%;min-height:185px;padding:20px 18px 17px;background:linear-gradient(150deg,#f5f5f1,#cdd9e8);color:#14243a;box-shadow:0 17px 35px #0007;transform:rotate(4deg);border-radius:2px}
+.paper-cover>span{display:block;font-size:7px;letter-spacing:1.5px;color:#526a88;margin-bottom:16px}
+.paper-cover strong{display:block;font-family:Georgia,serif;font-size:clamp(15px,1.5vw,23px);line-height:1.08}
+.paper-cover small{display:block;font-size:8px;line-height:1.5;color:#52647a;margin-top:12px;max-width:190px}
+.paper-bars{display:flex;align-items:end;gap:3px;position:absolute;right:15px;bottom:15px;height:24px}
+.paper-bars i{display:block;width:5px;background:#5689c5;height:35%}
+.paper-bars i:nth-child(2){height:55%}.paper-bars i:nth-child(3){height:70%}.paper-bars i:nth-child(4){height:85%}.paper-bars i:nth-child(5){height:100%}
+.scene-caption{position:absolute;z-index:6;right:18px;top:20px;display:flex;align-items:center;gap:8px;font-size:8px;letter-spacing:1.1px;color:#a4b6cc}
+.scene-dot{width:6px;height:6px;border-radius:50%;background:#75d6c0;box-shadow:0 0 0 4px #75d6c01c}
+@media(max-width:900px){.research-visual-panel{grid-template-columns:1fr}.visual-copy{padding:38px 28px 10px}.visual-scene{min-height:530px}.research-visual-section{padding:0 22px}}
+@media(max-width:560px){.research-visual-section{padding:0 16px;margin-bottom:60px}.visual-copy{padding:32px 22px 8px}.visual-scene{min-height:450px}.scene-window{width:78%;right:4%;top:12%;padding:11px}.window-heading{font-size:12px}.risk-score strong{font-size:23px}.book-stack{width:48%;bottom:23%}.book-stack div{font-size:8px;padding:10px}.research-notebook{width:47%;padding:12px 10px;bottom:5%}.research-notebook p{font-size:8px}.paper-cover{width:47%;right:3%;padding:15px 12px;min-height:165px}.paper-cover strong{font-size:15px}.paper-cover small{font-size:7px}.scene-caption{font-size:7px;right:10px;top:12px}}
+@media(prefers-reduced-motion:reduce){.research-visual-panel *{scroll-behavior:auto}}
