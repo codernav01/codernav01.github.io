@@ -19,7 +19,7 @@ jobs:
       - name: Check out portfolio
         uses: actions/checkout@v4
 
-      - name: Fetch latest public Medium story
+      - name: Fetch and select newest non-featured Medium story
         run: |
           python3 - <<'PY'
           import html
@@ -27,9 +27,15 @@ jobs:
           import re
           import urllib.request
           import xml.etree.ElementTree as ET
+          from datetime import datetime
+          from email.utils import parsedate_to_datetime
           from pathlib import Path
 
           feed_url = "https://medium.com/feed/@codecosmosbynav"
+          pinned = {
+              "https://medium.com/@codecosmosbynav/whatsapp-bug-removes-python-underscores-how-a-hidden-formatting-issue-breaks-your-code-e352fdceda61",
+              "https://medium.com/@codecosmosbynav/10-pandas-tricks-that-saved-my-data-analyst-job-0fe0620d421f",
+          }
           request = urllib.request.Request(
               feed_url,
               headers={"User-Agent": "Mozilla/5.0 (compatible; PortfolioFeedBot/1.0)"}
@@ -41,37 +47,76 @@ jobs:
           channel = root.find("channel")
           if channel is None:
               raise RuntimeError("Medium RSS feed has no channel")
-          item = channel.find("item")
-          if item is None:
+          items = channel.findall("item")
+          if not items:
               raise RuntimeError("Medium RSS feed contains no stories")
 
-          def text_of(node, path):
+          def child_text(node, path):
               found = node.find(path)
               return (found.text or "").strip() if found is not None else ""
 
-          title = html.unescape(text_of(item, "title"))
-          link = text_of(item, "link")
-          pub_date = text_of(item, "pubDate")
-          description = text_of(item, "description")
-          description = re.sub(r"(?is)<(script|style).*?>.*?</\1>", " ", description)
-          description = re.sub(r"(?s)<[^>]+>", " ", description)
-          description = html.unescape(re.sub(r"\s+", " ", description)).strip()
-          description = description[:190].rsplit(" ", 1)[0] + "…" if len(description) > 190 else description
+          def clean_description(value):
+              value = re.sub(r"(?is)<(script|style).*?>.*?</\\1>", " ", value)
+              value = re.sub(r"(?s)<[^>]+>", " ", value)
+              value = html.unescape(re.sub(r"\\s+", " ", value)).strip()
+              return value[:190].rsplit(" ", 1)[0] + "…" if len(value) > 190 else value
 
-          if not title or not link.startswith("https://medium.com/"):
-              raise RuntimeError("RSS item did not contain a valid Medium title/link")
+          def thumbnail_for(item):
+              for path in ("{http://search.yahoo.com/mrss/}thumbnail", "enclosure"):
+                  node = item.find(path)
+                  if node is not None:
+                      url = node.get("url")
+                      if url and url.startswith("https://"):
+                          return url
+              # Medium often embeds the lead image in content:encoded.
+              content = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
+              if content is not None and content.text:
+                  match = re.search(r'<img[^>]+src=["\\']([^"\\']+)["\\']', content.text, re.I)
+                  if match and match.group(1).startswith("https://"):
+                      return html.unescape(match.group(1))
+              return ""
 
-          result = {
-              "title": title,
-              "link": link,
-              "pubDate": pub_date,
-              "description": description or "Read the latest article on Code Cosmos by Nav."
-          }
-          Path("latest-medium.json").write_text(
-              json.dumps(result, ensure_ascii=False, indent=2) + "\n",
-              encoding="utf-8"
-          )
-          print("Prepared latest Medium story:", title)
+          stories = []
+          for item in items:
+              link = child_text(item, "link").split("?")[0].rstrip("/")
+              if not link or link in pinned:
+                  continue
+              date_text = child_text(item, "pubDate")
+              try:
+                  published = parsedate_to_datetime(date_text)
+                  if published.tzinfo is None:
+                      published = published.replace(tzinfo=datetime.now().astimezone().tzinfo)
+              except (TypeError, ValueError, OverflowError):
+                  published = datetime.min.astimezone()
+              title = html.unescape(child_text(item, "title"))
+              if not title or not link.startswith("https://medium.com/"):
+                  continue
+              desc = child_text(item, "description")
+              if not desc:
+                  content = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
+                  desc = content.text if content is not None and content.text else ""
+              stories.append({
+                  "title": title,
+                  "link": link,
+                  "pubDate": date_text,
+                  "_published": published,
+                  "description": clean_description(desc) or "Read the latest article on Code Cosmos by Nav.",
+                  "thumbnail": thumbnail_for(item),
+              })
+
+          if not stories:
+              raise RuntimeError("No non-featured Medium stories found in RSS; retaining previous data")
+
+          stories.sort(key=lambda story: story["_published"], reverse=True)
+          latest = stories[0]
+          latest.pop("_published")
+          output = Path("latest-medium.json")
+          new_content = json.dumps(latest, ensure_ascii=False, indent=2) + "\\n"
+          if output.exists() and output.read_text(encoding="utf-8") == new_content:
+              print("Latest non-featured Medium story is unchanged:", latest["title"])
+          else:
+              output.write_text(new_content, encoding="utf-8")
+              print("Selected latest non-featured Medium story:", latest["title"])
           PY
 
       - name: Commit changed feed data
