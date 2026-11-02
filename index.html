@@ -767,37 +767,63 @@
         <div>
           <span class="eyebrow">04 / TECHNICAL WRITING</span>
           <h2>Learning, out loud.</h2>
+          <p class="writing-intro">Practical notes on SQL, Python, and the small details that make analytics more reliable.</p>
         </div>
 
-        <a
-          class="underlink"
-          href="https://medium.com/@codecosmosbynav"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="underlink" href="https://medium.com/@codecosmosbynav" target="_blank" rel="noopener noreferrer">
           All articles on Medium ↗
         </a>
       </div>
 
-      <a
-        class="article-link"
-        href="https://medium.com/@codecosmosbynav/mastering-sql-subqueries-ctes-writing-smarter-queries-like-a-real-data-analyst-31e8c58fe027"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span class="article-category">
-          SQL<br>
-          <span>CODE COSMOS BY NAV</span>
-        </span>
+      <div class="article-grid">
+        <a class="article-card featured-article" href="https://medium.com/@codecosmosbynav/mastering-sql-subqueries-ctes-writing-smarter-queries-like-a-real-data-analyst-31e8c58fe027" target="_blank" rel="noopener noreferrer">
+          <div class="article-card-top"><span class="article-number">01</span><span class="article-badge">FEATURED · SQL</span></div>
+          <div>
+            <h3>Mastering SQL Subqueries &amp; CTEs</h3>
+            <p>Writing smarter queries like a real data analyst.</p>
+          </div>
+          <span class="article-card-footer">READ ARTICLE <span aria-hidden="true">↗</span></span>
+        </a>
 
-        <div>
-          <h3>Mastering SQL Subqueries &amp; CTEs</h3>
-          <p>Writing smarter queries like a real data analyst.</p>
-        </div>
+        <a class="article-card featured-article" href="https://medium.com/@codecosmosbynav" target="_blank" rel="noopener noreferrer" id="medium-pinned-two">
+          <div class="article-card-top"><span class="article-number">02</span><span class="article-badge">FEATURED · PYTHON</span></div>
+          <div>
+            <h3>Python Notes &amp; Practical Guides</h3>
+            <p>Explore practical Python explanations and lessons from Code Cosmos by Nav.</p>
+          </div>
+          <span class="article-card-footer">EXPLORE WRITING <span aria-hidden="true">↗</span></span>
+        </a>
 
-        <span class="article-arrow" aria-hidden="true">↗</span>
-      </a>
+        <a class="article-card latest-article" href="https://medium.com/@codecosmosbynav" target="_blank" rel="noopener noreferrer" id="medium-latest-card" aria-live="polite">
+          <div class="article-card-top"><span class="article-number">03</span><span class="article-badge">LATEST ARTICLE</span></div>
+          <div>
+            <h3 id="medium-latest-title">Latest from Code Cosmos by Nav</h3>
+            <p id="medium-latest-description">The newest Medium article will appear here automatically.</p>
+          </div>
+          <span class="article-card-footer"><span id="medium-latest-date">UPDATED AUTOMATICALLY</span><span aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+      <noscript><p class="writing-note">The latest article card updates automatically when the site data refreshes. JavaScript is needed to display its title and summary.</p></noscript>
     </section>
+
+    <script>
+      (async function loadLatestMediumArticle() {
+        const card = document.getElementById("medium-latest-card");
+        try {
+          const response = await fetch("latest-medium.json?cache=" + Date.now(), { cache: "no-store" });
+          if (!response.ok) return;
+          const article = await response.json();
+          if (!article || !article.title || !article.link) return;
+          document.getElementById("medium-latest-title").textContent = article.title;
+          document.getElementById("medium-latest-description").textContent = article.description || "Read the latest article on Code Cosmos by Nav.";
+          document.getElementById("medium-latest-date").textContent = article.pubDate ? new Date(article.pubDate).toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "numeric" }) : "LATEST ON MEDIUM";
+          card.href = article.link;
+          card.setAttribute("aria-label", "Read latest Medium article: " + article.title);
+        } catch (error) {
+          // Keep the portfolio's fallback state if the feed is temporarily unavailable.
+        }
+      })();
+    </script>
 
     <section id="contact" class="contact-section">
       <div class="wrap">
