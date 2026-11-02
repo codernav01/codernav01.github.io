@@ -56,9 +56,9 @@ jobs:
               return (found.text or "").strip() if found is not None else ""
 
           def clean_description(value):
-              value = re.sub(r"(?is)<(script|style).*?>.*?</\\1>", " ", value)
+              value = re.sub(r"(?is)<(script|style).*?>.*?</\1>", " ", value)
               value = re.sub(r"(?s)<[^>]+>", " ", value)
-              value = html.unescape(re.sub(r"\\s+", " ", value)).strip()
+              value = html.unescape(re.sub(r"\s+", " ", value)).strip()
               return value[:190].rsplit(" ", 1)[0] + "…" if len(value) > 190 else value
 
           def thumbnail_for(item):
@@ -71,7 +71,7 @@ jobs:
               # Medium often embeds the lead image in content:encoded.
               content = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
               if content is not None and content.text:
-                  match = re.search(r'<img[^>]+src=["\\']([^"\\']+)["\\']', content.text, re.I)
+                  match = re.search(r"<img[^>]+src=['""]([^'""]+)['""]", content.text, re.I)
                   if match and match.group(1).startswith("https://"):
                       return html.unescape(match.group(1))
               return ""
@@ -111,7 +111,7 @@ jobs:
           latest = stories[0]
           latest.pop("_published")
           output = Path("latest-medium.json")
-          new_content = json.dumps(latest, ensure_ascii=False, indent=2) + "\\n"
+          new_content = json.dumps(latest, ensure_ascii=False, indent=2) + "\n"
           if output.exists() and output.read_text(encoding="utf-8") == new_content:
               print("Latest non-featured Medium story is unchanged:", latest["title"])
           else:
