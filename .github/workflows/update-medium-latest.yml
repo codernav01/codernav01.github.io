@@ -53,9 +53,9 @@ jobs:
           link = text_of(item, "link")
           pub_date = text_of(item, "pubDate")
           description = text_of(item, "description")
-          description = re.sub(r"(?is)<(script|style).*?>.*?</\\1>", " ", description)
+          description = re.sub(r"(?is)<(script|style).*?>.*?</\1>", " ", description)
           description = re.sub(r"(?s)<[^>]+>", " ", description)
-          description = html.unescape(re.sub(r"\\s+", " ", description)).strip()
+          description = html.unescape(re.sub(r"\s+", " ", description)).strip()
           description = description[:190].rsplit(" ", 1)[0] + "…" if len(description) > 190 else description
 
           if not title or not link.startswith("https://medium.com/"):
@@ -68,7 +68,7 @@ jobs:
               "description": description or "Read the latest article on Code Cosmos by Nav."
           }
           Path("latest-medium.json").write_text(
-              json.dumps(result, ensure_ascii=False, indent=2) + "\\n",
+              json.dumps(result, ensure_ascii=False, indent=2) + "\n",
               encoding="utf-8"
           )
           print("Prepared latest Medium story:", title)
