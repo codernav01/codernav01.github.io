@@ -131,3 +131,13 @@
 .research-card-visual>span i{width:6px;height:6px;flex:0 0 auto;border-radius:50%;background:#83d7c4;box-shadow:0 0 0 3px #83d7c41a}
 @media(max-width:1100px){.research-teaser--split{grid-template-columns:minmax(0,1fr) minmax(210px,.78fr);gap:18px}.research-teaser--split .research-card-copy h3{font-size:25px}}
 @media(max-width:760px){.research-teaser--split{grid-template-columns:1fr;gap:20px}.research-teaser--split .research-card-visual{grid-row:1}.research-card-visual img{aspect-ratio:16/10;max-height:360px;object-fit:cover}.research-teaser--split .research-card-copy>.research-kicker{margin-top:18px}.research-teaser--split .research-card-copy h3{font-size:28px}}
+
+/* Final layout correction: research card spans the full content width */
+.research-wide-wrap{width:min(100% - 64px,1490px);max-width:1490px;margin:38px auto 0}
+.research-teaser--split{width:100%;grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);gap:30px;box-sizing:border-box;padding:30px}
+.research-teaser--split .research-card-copy{min-width:0}
+.research-teaser--split .research-card-copy h3{font-size:clamp(26px,2.3vw,36px);max-width:600px}
+.research-card-visual{width:100%;align-self:center}
+.research-card-visual img{width:100%;height:auto;aspect-ratio:1.12;object-fit:cover}
+@media(max-width:900px){.research-wide-wrap{width:calc(100% - 44px)}.research-teaser--split{grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:20px;padding:22px}}
+@media(max-width:700px){.research-wide-wrap{width:calc(100% - 32px);margin-top:24px}.research-teaser--split{grid-template-columns:1fr;padding:20px}.research-teaser--split .research-card-visual{grid-row:auto}.research-card-visual img{aspect-ratio:16/10;max-height:none}.research-teaser--split .research-card-copy h3{font-size:27px}}
