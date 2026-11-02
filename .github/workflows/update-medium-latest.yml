@@ -1,0 +1,87 @@
+name: Update latest Medium article
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-latest-medium
+  cancel-in-progress: false
+
+jobs:
+  update-latest-article:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out portfolio
+        uses: actions/checkout@v4
+
+      - name: Fetch latest public Medium story
+        run: |
+          python3 - <<'PY'
+          import html
+          import json
+          import re
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          feed_url = "https://medium.com/feed/@codecosmosbynav"
+          request = urllib.request.Request(
+              feed_url,
+              headers={"User-Agent": "Mozilla/5.0 (compatible; PortfolioFeedBot/1.0)"}
+          )
+          with urllib.request.urlopen(request, timeout=30) as response:
+              xml_data = response.read()
+
+          root = ET.fromstring(xml_data)
+          channel = root.find("channel")
+          if channel is None:
+              raise RuntimeError("Medium RSS feed has no channel")
+          item = channel.find("item")
+          if item is None:
+              raise RuntimeError("Medium RSS feed contains no stories")
+
+          def text_of(node, path):
+              found = node.find(path)
+              return (found.text or "").strip() if found is not None else ""
+
+          title = html.unescape(text_of(item, "title"))
+          link = text_of(item, "link")
+          pub_date = text_of(item, "pubDate")
+          description = text_of(item, "description")
+          description = re.sub(r"(?is)<(script|style).*?>.*?</\\1>", " ", description)
+          description = re.sub(r"(?s)<[^>]+>", " ", description)
+          description = html.unescape(re.sub(r"\\s+", " ", description)).strip()
+          description = description[:190].rsplit(" ", 1)[0] + "…" if len(description) > 190 else description
+
+          if not title or not link.startswith("https://medium.com/"):
+              raise RuntimeError("RSS item did not contain a valid Medium title/link")
+
+          result = {
+              "title": title,
+              "link": link,
+              "pubDate": pub_date,
+              "description": description or "Read the latest article on Code Cosmos by Nav."
+          }
+          Path("latest-medium.json").write_text(
+              json.dumps(result, ensure_ascii=False, indent=2) + "\\n",
+              encoding="utf-8"
+          )
+          print("Prepared latest Medium story:", title)
+          PY
+
+      - name: Commit changed feed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add latest-medium.json
+          if git diff --cached --quiet; then
+            echo "Latest Medium story has not changed."
+            exit 0
+          fi
+          git commit -m "Refresh latest Medium article"
+          git push
