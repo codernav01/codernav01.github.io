@@ -20,3 +20,20 @@
 #quickbite-project,#election-project,#airpure-project,#luca-project,#jharia-project,#experience{scroll-margin-top:24px}
 @media(max-width:950px){.skills-projects .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.skills-section-heading{align-items:start}}
 @media(max-width:680px){.skills-section-heading{display:block}.skills-section-heading>p{margin-top:14px}.skills-projects .skills-grid{grid-template-columns:1fr;gap:12px}.skill-card{padding:21px}.skill-card h4{font-size:19px}}
+
+
+/* Editorial Medium writing cards */
+.writing-intro{max-width:470px;color:var(--muted);font-size:15px;margin:17px 0 0}
+.article-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:34px}
+.article-card{min-height:285px;padding:23px 23px 20px;border:1px solid var(--line);border-radius:5px;background:linear-gradient(150deg,#191d22,#131517);display:flex;flex-direction:column;justify-content:space-between;gap:28px;transition:transform .2s,border-color .2s,background .2s}
+.article-card:hover{border-color:#7586ae;transform:translateY(-3px);color:var(--ink);background:linear-gradient(150deg,#202630,#151719)}
+.article-card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.article-number{font-size:14px;color:var(--accent);letter-spacing:1px}
+.article-badge{font-size:9px;letter-spacing:1px;border:1px solid #424852;border-radius:20px;padding:5px 8px;color:#c9ced8}
+.article-card h3{font-size:23px;line-height:1.28;letter-spacing:-.6px;margin:0 0 12px}
+.article-card p{font-size:14px;line-height:1.7;color:var(--muted);margin:0}
+.article-card-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:17px;font-size:10px;letter-spacing:1.1px;color:#c7d2f4}
+.article-card-footer>span:last-child{font-size:20px}
+.writing-note{font-size:13px;color:var(--muted);margin-top:18px}
+@media(max-width:950px){.article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.article-card:last-child{grid-column:1/-1;min-height:240px}}
+@media(max-width:680px){.article-grid{grid-template-columns:1fr;gap:12px;margin-top:25px}.article-card,.article-card:last-child{grid-column:auto;min-height:235px;padding:22px}.article-card h3{font-size:22px}.writing-intro{font-size:14px}}
