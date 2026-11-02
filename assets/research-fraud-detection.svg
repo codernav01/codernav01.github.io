@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" viewBox="0 0 900 720" role="img" aria-labelledby="title desc">
+<title id="title">Trustworthy AI research desk</title><desc id="desc">A premium editorial illustration of a laptop showing a financial fraud risk dashboard beside machine learning books, research notes, a pen, and a working paper.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1c3044"/><stop offset=".55" stop-color="#101a27"/><stop offset="1" stop-color="#090e15"/></linearGradient>
+ <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#16283a"/><stop offset="1" stop-color="#09111b"/></linearGradient>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f3eb"/><stop offset="1" stop-color="#cbd7e6"/></linearGradient>
+ <linearGradient id="book" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#243f57"/><stop offset="1" stop-color="#111e2d"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="12"/><feOffset dy="13"/><feComponentTransfer><feFuncA type="linear" slope=".42"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="900" height="720" rx="18" fill="url(#bg)"/>
+<circle cx="680" cy="160" r="220" fill="#1765a0" opacity=".12"/>
+<path d="M0 480L900 400V720H0Z" fill="#101820"/>
+<!-- warm desk light -->
+<ellipse cx="470" cy="620" rx="380" ry="110" fill="#c78b54" opacity=".08"/>
+<!-- laptop -->
+<g filter="url(#shadow)">
+ <path d="M315 115Q318 94 341 94H738Q759 95 758 119L741 410H300Z" fill="#111923" stroke="#6b91b8" stroke-width="3"/>
+ <rect x="322" y="112" width="414" height="278" rx="7" fill="url(#screen)"/>
+ <text x="345" y="145" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#edf5ff">Financial Fraud Detection</text>
+ <text x="346" y="172" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.8" fill="#87a9ce">RISK INTELLIGENCE / MODEL VIEW</text>
+ <rect x="345" y="187" width="143" height="82" rx="7" fill="#10253a" stroke="#254c70"/>
+ <rect x="358" y="202" width="57" height="36" rx="4" fill="#173d5c" stroke="#45b9ee"/>
+ <path d="M367 212h38M367 220h27M367 228h31" stroke="#6dd5ff" stroke-width="2" opacity=".8"/>
+ <path d="M410 233l13 0 0 13-13 0z" fill="#40bdf5"/><path d="M413 233v-5a4 4 0 0 1 8 0v5" fill="none" stroke="#40bdf5" stroke-width="2"/>
+ <text x="427" y="251" font-family="Arial,sans-serif" font-size="9" fill="#9bb8d5">Secure signal</text>
+ <rect x="501" y="187" width="212" height="82" rx="7" fill="#0c1927" stroke="#25435f"/>
+ <text x="515" y="204" font-family="Arial,sans-serif" font-size="11" fill="#d8e9fc">Transaction risk</text>
+ <path d="M515 250L535 237 552 242 570 225 589 231 607 214 626 220 644 205 665 211 690 194" fill="none" stroke="#54c9ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M515 250L535 237 552 242 570 225 589 231 607 214 626 220 644 205 665 211 690 194V257H515Z" fill="#36a8e8" opacity=".09"/>
+ <circle cx="390" cy="322" r="38" fill="#4b1827" stroke="#ff7188" stroke-width="5"/>
+ <circle cx="390" cy="322" r="30" fill="#311624"/>
+ <text x="390" y="313" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#ffb2be">RISK SCORE</text>
+ <text x="390" y="337" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#ff8191">0.92</text>
+ <rect x="445" y="284" width="268" height="78" rx="7" fill="#0d1927" stroke="#2b4863"/>
+ <text x="460" y="302" font-family="Arial,sans-serif" font-size="11" fill="#dbeaff">Explanation signals</text>
+ <text x="460" y="321" font-family="Arial,sans-serif" font-size="9" fill="#afc5dd">Transaction amount</text><rect x="570" y="313" width="91" height="6" rx="3" fill="#45bff2"/><text x="681" y="321" font-family="Arial,sans-serif" font-size="9" fill="#b9e8ff">+0.41</text>
+ <text x="460" y="339" font-family="Arial,sans-serif" font-size="9" fill="#afc5dd">Location variance</text><rect x="570" y="331" width="68" height="6" rx="3" fill="#45bff2"/><text x="681" y="339" font-family="Arial,sans-serif" font-size="9" fill="#b9e8ff">+0.28</text>
+ <path d="M281 410H779L836 456Q840 466 819 468H246Q225 465 236 454Z" fill="#637c95" stroke="#a0b8cf" stroke-width="2"/>
+ <path d="M300 414H761L792 450H270Z" fill="#182635"/>
+ <rect x="455" y="419" width="137" height="21" rx="4" fill="#263a4d" stroke="#506a82"/>
+ <path d="M250 457H823" stroke="#d2deeb" stroke-width="2" opacity=".5"/>
+</g>
+<!-- books -->
+<g filter="url(#shadow)">
+ <path d="M55 342L280 326L302 367L71 390Z" fill="url(#book)" stroke="#5e829f" stroke-width="2"/>
+ <path d="M71 390L302 367V384L71 407Z" fill="#0c1724"/>
+ <path d="M55 291L272 277L294 317L71 341Z" fill="#172d42" stroke="#7193b2" stroke-width="2"/>
+ <path d="M71 341L294 317V334L71 358Z" fill="#0b1520"/>
+ <path d="M55 241L264 226L286 266L71 291Z" fill="#233e55" stroke="#8ba4bd" stroke-width="2"/>
+ <path d="M71 291L286 266V282L71 307Z" fill="#101b29"/>
+ <text x="90" y="269" font-family="Georgia,serif" font-size="15" fill="#f1f5fb">Machine Learning</text>
+ <text x="91" y="320" font-family="Georgia,serif" font-size="14" fill="#f1f5fb">Explainable AI · SHAP</text>
+ <text x="91" y="370" font-family="Georgia,serif" font-size="14" fill="#f1f5fb">Model Calibration</text>
+</g>
+<!-- notebook -->
+<g filter="url(#shadow)" transform="rotate(-5 260 570)">
+ <rect x="47" y="470" width="345" height="204" rx="4" fill="#d4dce5" stroke="#aebdce" stroke-width="2"/>
+ <rect x="58" y="480" width="324" height="184" fill="url(#paper)"/>
+ <path d="M58 514H382M58 543H382M58 572H382M58 601H382M58 630H382" stroke="#9db3c8" stroke-width="1" opacity=".7"/>
+ <text x="79" y="504" font-family="Georgia,serif" font-size="17" font-style="italic" font-weight="700" fill="#263b53">Research Notes</text>
+ <g font-family="Arial,sans-serif" font-size="11" fill="#354c65">
+ <text x="82" y="535">✓ Model evaluation</text><text x="82" y="564">✓ Calibration &amp; validation</text><text x="82" y="593">✓ Explainability (SHAP)</text><text x="82" y="622">○ Risk categorization</text><text x="82" y="651">○ Findings review</text>
+ </g>
+</g>
+<!-- pen -->
+<g transform="rotate(34 352 570)" filter="url(#shadow)"><rect x="344" y="500" width="12" height="150" rx="6" fill="#152a40" stroke="#8eb1d4" stroke-width="2"/><rect x="347" y="510" width="5" height="118" fill="#7cb6e5"/><path d="M344 646L350 666L356 646Z" fill="#b9c8d8"/><rect x="343" y="515" width="14" height="8" rx="3" fill="#d1e5f7"/></g>
+<!-- paper cover -->
+<g filter="url(#shadow)" transform="rotate(4 650 580)">
+ <rect x="473" y="482" width="355" height="211" rx="3" fill="url(#paper)" stroke="#a8bbd1" stroke-width="2"/>
+ <text x="497" y="509" font-family="Arial,sans-serif" font-size="9" letter-spacing="2" fill="#526e8e">WORKING PAPER · FORTHCOMING</text>
+ <path d="M497 520H800" stroke="#8ca8c7" opacity=".8"/>
+ <text x="497" y="555" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#16283e">Trustworthy AI for</text>
+ <text x="497" y="585" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#16283e">Financial Fraud</text>
+ <text x="497" y="615" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#16283e">Detection</text>
+ <text x="497" y="642" font-family="Arial,sans-serif" font-size="11" fill="#4d627b">An explainable decision-support framework</text>
+ <g fill="#568fc4"><rect x="740" y="655" width="8" height="20"/><rect x="753" y="647" width="8" height="28"/><rect x="766" y="637" width="8" height="38"/><rect x="779" y="625" width="8" height="50"/></g>
+</g>
+<text x="28" y="38" font-family="Arial,sans-serif" font-size="10" letter-spacing="2" fill="#a8c9ec">RESEARCH IN PROGRESS · VISUAL CONCEPT</text>
+</svg>
