@@ -1,6 +1,7 @@
 {
-  "title": "Mastering SQL Subqueries & CTEs",
-  "link": "https://medium.com/@codecosmosbynav/mastering-sql-subqueries-ctes-writing-smarter-queries-like-a-real-data-analyst-31e8c58fe027",
-  "pubDate": "",
-  "description": "Writing smarter queries like a real data analyst."
+  "title": "SQL Window Functions Explained: ROW_NUMBER, RANK, DENSE_RANK, LAG & LEAD in MySQL",
+  "link": "https://medium.com/@codecosmosbynav/sql-window-functions-explained-row-number-rank-dense-rank-lag-lead-in-mysql-45871a40ff15",
+  "pubDate": "Thu, 24 Sep 2026 14:24:23 GMT",
+  "description": "Learn OVER(), PARTITION BY, ranking, previous/next row comparisons, Top-N analysis, and running totals with one simple MySQL dataset. Continue reading on Medium »",
+  "thumbnail": ""
 }
