@@ -88,8 +88,14 @@
    <p class="section-intro">A repeatable, evidence-led process for turning real-world questions into useful analytical decisions.</p>
   </div>
   <div class="approach-loop" aria-label="Six-stage analytical workflow">
-   <svg class="approach-orbit" viewBox="0 0 1000 560" role="img" aria-label="A static circular path connecting six analytical stages">
-    <ellipse cx="500" cy="280" rx="385" ry="218" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 10" opacity=".62"/>
+   <svg class="approach-orbit" viewBox="0 0 1000 560" role="img" aria-label="A circular path with a moving indicator connecting six analytical stages">
+    <path id="approach-orbit-path" d="M 885,280 A 385,218 0 1 1 115,280 A 385,218 0 1 1 885,280" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 10" opacity=".62"/>
+    <circle r="6" fill="#f0d17c">
+     <animateMotion dur="12s" repeatCount="indefinite" rotate="0"><mpath href="#approach-orbit-path"/></animateMotion>
+    </circle>
+    <circle r="3.5" fill="#9dbbfa" opacity=".9">
+     <animateMotion dur="12s" begin="-6s" repeatCount="indefinite" rotate="0"><mpath href="#approach-orbit-path"/></animateMotion>
+    </circle>
    </svg>
    <div class="approach-core"><span>THE ANALYTICAL LOOP</span><strong>Evidence-led<br>decisions</strong><small>Ask · Test · Learn</small></div>
    <article class="approach-step step-1"><span class="approach-number">01</span><h3>Define</h3><p>Frame the problem and clarify the decision to support.</p></article>
