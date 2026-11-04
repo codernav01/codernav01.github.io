@@ -1,1020 +1,131 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Navjot Singh is a Data Analyst and Research Scholar working with Python, SQL, Power BI, business intelligence, and applied analytics. Explore projects, experience, research, and technical writing.">
-  <meta name="theme-color" content="#101214">
-  <meta name="author" content="Navjot Singh">
-  <link rel="canonical" href="https://codernav01.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Navjot Singh | Data Analyst &amp; Research Scholar">
-  <meta property="og:description" content="Projects and practical work across Python, SQL, Power BI, business intelligence, and applied analytics.">
-  <meta property="og:url" content="https://codernav01.github.io/">
-  <meta property="og:image" content="https://codernav01.github.io/navjot-singh-portrait.jpeg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Navjot Singh | Data Analyst &amp; Research Scholar">
-  <meta name="twitter:description" content="Explore analytics projects, research, technical writing, and experience.">
-  <meta name="twitter:image" content="https://codernav01.github.io/navjot-singh-portrait.jpeg">
-
-  <title>Navjot Singh | Data Analyst, BI &amp; Research</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Navjot Singh",
-    "url": "https://codernav01.github.io/",
-    "jobTitle": "Data Analyst",
-    "email": "mailto:navjotaroundai@gmail.com",
-    "sameAs": [
-      "https://www.linkedin.com/in/navjot-singh-068a52233/",
-      "https://github.com/codernav01",
-      "https://medium.com/@codecosmosbynav",
-      "https://www.quora.com/profile/Navjot-Singh-3613"
-    ]
-  }
-  </script>
-
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23c5d3ff'/%3E%3Cpath d='M11 29V11h4l10 12V11h4v18h-4L15 17v12z' fill='%23101214'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    .hero-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
-      gap: 6%;
-      align-items: center;
-      margin-top: 34px;
-    }
-
-    .hero-content {
-      min-width: 0;
-    }
-
-    .hero-content h1 {
-      font-size: clamp(43px, 5.5vw, 78px);
-      margin: 0 0 28px;
-    }
-
-    .hero-content .hero-lower {
-      display: block;
-    }
-
-    .hero-content .hero-lower > p {
-      font-size: 17px;
-      max-width: 480px;
-    }
-
-    .hero-content .hero-actions {
-      margin-top: 27px;
-      flex-direction: row;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px 25px;
-    }
-
-    .hero-portrait {
-      margin: 0;
-      overflow: hidden;
-      border: 1px solid #504049;
-      border-radius: 8px;
-      background: #251a20;
-    }
-
-    .hero-portrait img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .hero-portrait figcaption {
-      padding: 16px 20px;
-      background: #1b1b20;
-      border-top: 1px solid #504049;
-      color: #f4f3ee;
-      font-size: 16px;
-    }
-
-    .hero-portrait figcaption span {
-      display: block;
-      margin-top: 3px;
-      font-size: 13px;
-      color: #afb1b4;
-    }
-
-    @media (max-width: 950px) {
-      .hero-layout {
-        gap: 4%;
-      }
-
-      .hero-content h1 {
-        font-size: clamp(40px, 5.5vw, 58px);
-      }
-
-      .hero-content .hero-lower > p {
-        font-size: 16px;
-      }
-
-      .hero-content .button {
-        gap: 20px;
-        padding: 13px 18px;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .hero-layout {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        margin-top: 27px;
-      }
-
-      .hero-content h1 {
-        font-size: clamp(42px, 9vw, 65px);
-      }
-
-      .hero-content .hero-actions {
-        margin-top: 24px;
-        gap: 20px;
-      }
-
-      .hero-portrait {
-        width: 100%;
-        max-width: 420px;
-        justify-self: center;
-      }
-
-      .hero-caption {
-        margin-top: 32px;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Navjot Singh — Data Analyst and Research Scholar. Explore business intelligence, Python, SQL, Power BI, and applied analytics projects.">
+<meta name="theme-color" content="#101512">
+<meta name="author" content="Navjot Singh">
+<link rel="canonical" href="https://codernav01.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Navjot Singh | Data Analyst & BI">
+<meta property="og:description" content="Business intelligence, analytics case studies, research and technical writing.">
+<meta property="og:url" content="https://codernav01.github.io/">
+<meta property="og:image" content="https://codernav01.github.io/navjot-singh-portrait.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<title>Navjot Singh — Data Analyst & Business Intelligence</title>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Navjot Singh","url":"https://codernav01.github.io/","jobTitle":"Data Analyst","email":"mailto:navjotaroundai@gmail.com","sameAs":["https://www.linkedin.com/in/navjot-singh-068a52233/","https://github.com/codernav01","https://medium.com/@codecosmosbynav","https://www.quora.com/profile/Navjot-Singh-3613"]}
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23c5f36b'/%3E%3Cpath d='M11 29V11h4l10 12V11h4v18h-4L15 17v12z' fill='%23101512'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <a class="brand" href="#" aria-label="Navjot Singh home">
-      nav<span>.</span>
-    </a>
-
-    <nav aria-label="Main navigation">
-      <a href="#work">Selected work</a>
-      <a href="#about">About</a>
-      <a href="#upcoming">Upcoming</a>
-      <a href="#skills">Skills</a>
-      <a href="#writing">Writing</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <a class="small-button" href="Navjot-Singh-Resume.pdf" download>
-      Résumé <span aria-hidden="true">↓</span>
-    </a>
-  </header>
-
-  <main id="main">
-    <section class="hero wrap">
-      <div class="eyebrow intro-label">
-        NAVJOT SINGH
-        <span>DATA ANALYST · RESEARCH SCHOLAR</span>
-      </div>
-
-      <div class="hero-layout">
-        <div class="hero-content">
-          <h1>
-            Good questions.<br>
-            Clear analysis.<br>
-            <em>Better decisions.</em>
-          </h1>
-
-          <div class="hero-lower">
-            <p>
-              I connect a background in finance with Python, SQL,
-              and business intelligence to turn complex data into
-              a useful next step.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button" href="#work">
-                View selected work <span aria-hidden="true">↘</span>
-              </a>
-
-              <a class="underlink" href="Navjot-Singh-Resume.pdf" download>
-                Download résumé ↓
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <figure class="hero-portrait">
-          <img
-            src="navjot-singh-portrait.jpeg"
-            alt="Navjot Singh wearing a mustard turban, glasses, and a charcoal blazer"
-            width="998"
-            height="1139"
-            fetchpriority="high"
-          >
-
-          <figcaption>
-            Navjot Singh
-            <span>Data Analyst &amp; Research Scholar</span>
-          </figcaption>
-        </figure>
-      </div>
-
-      <div class="hero-caption">
-        <span>DHANBAD, INDIA</span>
-        <span>BUSINESS INTELLIGENCE / APPLIED ANALYTICS / RESEARCH</span>
-        <span>PORTFOLIO — 2026</span>
-      </div>
-    </section>
-
-    <section class="proof-band" aria-label="Experience highlights">
-      <div class="wrap proof-grid">
-        <div>
-          <strong>20,000<span>+</span></strong>
-          <p>Records analyzed at DS Vidya</p>
-        </div>
-
-        <div>
-          <strong>35<span>%</span></strong>
-          <p>Improvement in reporting efficiency</p>
-        </div>
-
-        <div>
-          <strong>4</strong>
-          <p>Featured projects across distinct domains</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="wrap section">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">01 / SELECTED WORK</span>
-          <h2>From business questions<br>to research questions.</h2>
-        </div>
-
-        <p>
-          Four projects that show how I work with data, communicate
-          evidence, and connect findings to decisions.
-        </p>
-      </div>
-
-      <article class="project" id="quickbite-project">
-        <div class="project-summary">
-          <span class="project-number">01</span>
-
-          <div>
-            <div class="project-meta">
-              <span>BUSINESS INTELLIGENCE</span>
-              <span class="status">CASE STUDY</span>
-            </div>
-
-            <h3>QuickBite Express</h3>
-            <p class="subtitle">Crisis recovery &amp; business intelligence</p>
-
-            <p>
-              What changed when a delivery business entered a crisis—and
-              where should recovery begin?
-            </p>
-
-            <div class="tags">
-              <span>Python</span>
-              <span>MySQL</span>
-              <span>Power BI</span>
-            </div>
-
-            <a
-              class="underlink"
-              href="https://github.com/codernav01/QuickBite-Crisis-Recovery-Analytics"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Explore project on GitHub ↗
-            </a>
-          </div>
-        </div>
-
-        <div class="project-evidence blue">
-          <span class="eyebrow">PRE-CRISIS VS. CRISIS · 2025</span>
-
-          <div class="metric-pair">
-            <div>
-              <strong>−69.78<span>%</span></strong>
-              <p>Order volume</p>
-            </div>
-
-            <div>
-              <strong>+52.09<span>%</span></strong>
-              <p>Average delivery time</p>
-            </div>
-          </div>
-
-          <p class="evidence-note">
-            Analysis across eight relational datasets identified service
-            breakdowns, customer risk, and recovery priorities.
-          </p>
-
-          <details>
-            <summary>
-              Approach &amp; findings <span aria-hidden="true">+</span>
-            </summary>
-
-            <p>
-              Compared pre-crisis and crisis performance using Python,
-              MySQL, and Power BI. Investigated orders, delivery times,
-              cancellations, SLA breaches, and high-value customer risk
-              to translate operational findings into recovery priorities.
-            </p>
-          </details>
-        </div>
-      </article>
-
-      <article class="project" id="election-project">
-        <div class="project-summary">
-          <span class="project-number">02</span>
-
-          <div>
-            <div class="project-meta">
-              <span>PUBLIC-DOMAIN ANALYTICS</span>
-              <span class="status">CASE STUDY</span>
-            </div>
-
-            <h3>Election Intelligence</h3>
-            <p class="subtitle">Tamil Nadu Assembly Elections</p>
-
-            <p>
-              How did constituency-level outcomes and party vote-share
-              patterns change between elections?
-            </p>
-
-            <div class="tags">
-              <span>SQL</span>
-              <span>Python</span>
-              <span>Power BI</span>
-            </div>
-
-            <a
-              class="underlink"
-              href="https://github.com/codernav01/Election-Intelligence-Analytics"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Explore project on GitHub ↗
-            </a>
-          </div>
-        </div>
-
-        <div class="project-evidence pale">
-          <span class="eyebrow">CONSTITUENCY-LEVEL COMPARISON</span>
-
-          <div class="year-comparison">
-            <strong>2021</strong>
-            <span>→</span>
-            <strong>2026</strong>
-          </div>
-
-          <div class="evidence-topics">
-            <span>Regional shifts</span>
-            <span>Winner flips</span>
-            <span>Vote share</span>
-          </div>
-
-          <p class="evidence-note">
-            Three datasets connected in a Python–MySQL–Power BI workflow.
-          </p>
-
-          <details>
-            <summary>
-              Approach &amp; findings <span aria-hidden="true">+</span>
-            </summary>
-
-            <p>
-              Used SQL CTEs, window functions, joins, and comparative
-              analysis to investigate regional shifts, constituency
-              winner flips, and party vote-share patterns. Presented
-              the analysis through interactive BI storytelling.
-            </p>
-          </details>
-        </div>
-      </article>
-
-      <article class="project" id="airpure-project">
-        <div class="project-summary">
-          <span class="project-number">03</span>
-
-          <div>
-            <div class="project-meta">
-              <span>ENVIRONMENT &amp; MARKET ANALYSIS</span>
-              <span class="status">CASE STUDY</span>
-            </div>
-
-            <h3>AirPure Innovations</h3>
-            <p class="subtitle">Air pollution business intelligence</p>
-
-            <p>
-              Where do pollution patterns and potential demand create
-              a case for air-purifier market analysis?
-            </p>
-
-            <div class="tags">
-              <span>Pandas</span>
-              <span>EDA</span>
-              <span>Statistics</span>
-            </div>
-
-            <a
-              class="underlink"
-              href="https://github.com/codernav01/Airpure-Business-Intelligence-Analysis"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Explore project on GitHub ↗
-            </a>
-          </div>
-        </div>
-
-        <div class="project-evidence sage">
-          <span class="eyebrow">FOUR DATASETS · ONE ANALYTICAL VIEW</span>
-
-          <div class="data-grid">
-            <span>01 <strong>Air quality</strong></span>
-            <span>02 <strong>Health</strong></span>
-            <span>03 <strong>Vehicle growth</strong></span>
-            <span>04 <strong>Population</strong></span>
-          </div>
-
-          <p class="evidence-note">
-            Connecting pollution hotspots, seasonal trends, and demand drivers.
-          </p>
-
-          <details>
-            <summary>
-              Approach &amp; findings <span aria-hidden="true">+</span>
-            </summary>
-
-            <p>
-              Integrated four real-world datasets with Python and Pandas
-              for cleaning, exploratory analysis, correlation, and severity
-              analysis. Developed market-opportunity analysis from pollution
-              patterns and related health and demographic indicators.
-              Correlations describe associations, not proof of causation.
-            </p>
-          </details>
-        </div>
-      </article>
-
-      <article class="project" id="luca-project">
-        <div class="project-summary">
-          <span class="project-number">04</span>
-
-          <div>
-            <div class="project-meta">
-              <span>BIOINFORMATICS</span>
-              <span class="status ongoing">ONGOING</span>
-            </div>
-
-            <h3>LUCA</h3>
-            <p class="subtitle">Last Universal Common Ancestor</p>
-
-            <p>
-              Where do independent reconstructions agree—and what does
-              that tell us about ancestral biology?
-            </p>
-
-            <div class="tags">
-              <span>Python / Pandas</span>
-              <span>SQL</span>
-              <span>Power BI</span>
-            </div>
-
-            <span class="project-note">
-              Research workflow in development
-            </span>
-          </div>
-        </div>
-
-        <div class="project-evidence lilac">
-          <span class="eyebrow">RESEARCH QUESTIONS</span>
-
-          <ul class="research-questions">
-            <li>Which proteins show consensus?</li>
-            <li>How complete are metabolic pathways?</li>
-            <li>Where do studies agree or diverge?</li>
-          </ul>
-
-          <p class="evidence-note">
-            Building a reproducible analytical layer across LUCA
-            reconstruction datasets.
-          </p>
-
-          <details>
-            <summary>
-              Current scope <span aria-hidden="true">+</span>
-            </summary>
-
-            <p>
-              Consolidating reconstruction datasets and developing
-              analyses of protein consensus, posterior probabilities,
-              metabolic completeness, and cross-study agreement.
-              Planned outputs include feature engineering, statistical
-              analysis, and a research dashboard. Results are still
-              in development.
-            </p>
-          </details>
-        </div>
-      </article>
-
-      <div class="archive-link">
-        <p>More analysis, notebooks, and experiments.</p>
-
-        <a
-          class="underlink"
-          href="https://github.com/codernav01"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Browse all repositories ↗
-        </a>
-      </div>
-    </section>
-
-    <section id="upcoming" class="upcoming-section">
-      <div class="wrap upcoming-grid">
-        <div>
-          <span class="eyebrow">02 / WHAT’S NEXT</span>
-          <h2>Closer to home.<br>Bigger questions.</h2>
-        </div>
-
-        <article id="jharia-project">
-          <span class="status upcoming">UPCOMING · PLANNED PROJECT</span>
-          <h3>Jharia Coal Fire Intelligence</h3>
-          <p class="subtitle">AI &amp; satellite monitoring analytics</p>
-          <p>
-            A planned project exploring how satellite observations
-            and data analytics can help investigate coal-fire patterns
-            in Jharia. The focus is on building a clear, reproducible
-            workflow before drawing conclusions.
-          </p>
-          <div class="planned-output">
-            <span>PLANNED DIRECTION</span>
-            <p>Satellite data preparation · Spatial and temporal analysis · Monitoring dashboard</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="wrap research-wide-wrap">
-        <article id="upcoming-research-paper" class="research-teaser research-teaser--split">
-          <div class="research-card-copy">
-            <span class="status upcoming">RESEARCH IN PROGRESS · FORTHCOMING</span>
-            <p class="research-kicker">WORKING PAPER · TRUSTWORTHY AI</p>
-            <h3>Trustworthy AI for Financial Fraud Detection</h3>
-            <p class="subtitle">An Explainable Decision Support Framework</p>
-            <p>This research explores how fraud-risk predictions can become more transparent and useful for human decision-making—not just more accurate on paper. The framework brings together calibrated machine-learning predictions, feature-level explanations, and practical risk categories.</p>
-            <div class="research-focus">
-              <span>THE QUESTIONS BEING EXPLORED</span>
-              <ul>
-                <li>How can fraud-risk scores be calibrated to better reflect uncertainty?</li>
-                <li>Can feature-level explanations help reviewers understand why a transaction is flagged?</li>
-                <li>How can model outputs be translated into clear, risk-based decision support?</li>
-              </ul>
-            </div>
-            <div class="research-tags" aria-label="Research themes">
-              <span>Explainable AI</span><span>Fraud Detection</span><span>Model Calibration</span><span>Decision Support</span>
-            </div>
-            <p class="research-disclaimer">Currently in development. Experiments and conclusions are being refined; findings will be shared after validation.</p>
-            <span class="research-status-line"><span class="pulse-dot" aria-hidden="true"></span> BUILDING THE EVIDENCE · NOT ANNOUNCING RESULTS</span>
-          </div>
-          <div class="research-card-visual">
-            <img src="assets/research-fraud-detection.svg" alt="Financial fraud detection research desk with AI dashboard, machine-learning books, notes and working paper" loading="lazy" width="900" height="720">
-            <span>RESEARCH IN PROGRESS <i aria-hidden="true"></i> FINDINGS PENDING VALIDATION</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-        <section id="about" class="wrap section">
-      <div class="about-grid">
-        <div>
-          <span class="eyebrow">03 / THE PERSON BEHIND THE WORK</span>
-          <h2>Finance roots.<br>A research mindset.</h2>
-
-          <p class="body-large">
-            I’m Navjot Singh, a data analyst, research scholar,
-            and freelancer based in Dhanbad, India.
-          </p>
-
-          <p>
-            My foundation in commerce and financial reporting shapes how
-            I approach analytics: check the numbers, understand the context,
-            and make the conclusion useful. I’m pursuing an MCA in Machine
-            Learning &amp; AI at Chandigarh University.
-          </p>
-
-          <p>
-            Alongside business intelligence, I’m developing an interest
-            in bioinformatics and environmental analysis. I share what
-            I learn through
-            <a
-              class="inline-link"
-              href="https://medium.com/@codecosmosbynav"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Code Cosmos by Nav</a>.
-          </p>
-
-          <a
-            class="underlink"
-            href="Navjot-Singh-Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open full résumé ↗
-          </a>
-        </div>
-
-        <div class="experience">
-          <span class="eyebrow">EXPERIENCE</span>
-
-          <article id="experience">
-            <span class="date">SEP 2026 — PRESENT</span>
-            <h3>Data Analyst Associate</h3>
-
-            <span class="organization">
-              DS Vidya · Data Analytics &amp; Reporting
-            </span>
-
-            <p>
-              Perform data cleaning, analysis, and validation using Python
-              and SQL. Develop KPI reports and dashboards, document analytical
-              workflows, and support research and AI-related analytics projects.
-            </p>
-          </article>
-
-          <article>
-            <span class="date">AUG 2025 — AUG 2026</span>
-            <h3>Research Scholar</h3>
-
-            <span class="organization">
-              DS Vidya · Data Science &amp; AI Hub
-            </span>
-
-            <p>
-              Analyzed 20,000+ records using Python, SQL, and Excel, and
-              developed Power BI dashboards that improved reporting efficiency
-              by 35%. Optimized data-cleaning and validation workflows to
-              improve processing efficiency by 15%, applying statistical
-              analysis and forecasting techniques.
-            </p>
-          </article>
-
-          <article>
-            <span class="date">JAN — JUN 2025</span>
-            <h3>Accounting Intern</h3>
-
-            <span class="organization">
-              Gara Industries · Finance &amp; Reporting
-            </span>
-
-            <p>
-              Audited 500+ financial records and prepared reconciliation
-              reports, strengthening data accuracy and reducing reporting
-              errors by 20%.
-            </p>
-          </article>
-        </div>
-      </div>
-
-      <div class="skills-block skills-projects" id="skills">
-        <div class="skills-section-heading">
-          <div>
-            <span class="eyebrow">THE TOOLKIT</span>
-            <h3>Skills in practice.</h3>
-          </div>
-          <p>Explore the tools I use and the projects where I apply them. Project links open the relevant case study on this page.</p>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-card">
-            <span class="skill-index">01 / PROGRAMMING</span>
-            <h4>Python &amp; Data Analysis</h4>
-            <p>Pandas · NumPy · Data cleaning · EDA · Feature engineering</p>
-            <div class="skill-project-links" aria-label="Related projects">
-              <a href="#quickbite-project">QuickBite Express <span aria-hidden="true">↗</span></a>
-              <a href="#election-project">Election Intelligence <span aria-hidden="true">↗</span></a>
-              <a href="#airpure-project">AirPure Innovations <span aria-hidden="true">↗</span></a>
-              <a href="#luca-project">LUCA <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-
-          <article class="skill-card">
-            <span class="skill-index">02 / DATABASES</span>
-            <h4>SQL &amp; Data Management</h4>
-            <p>MySQL · PostgreSQL · Joins · CTEs · Window functions · Validation</p>
-            <div class="skill-project-links" aria-label="Related projects">
-              <a href="#quickbite-project">QuickBite Express <span aria-hidden="true">↗</span></a>
-              <a href="#election-project">Election Intelligence <span aria-hidden="true">↗</span></a>
-              <a href="#luca-project">LUCA <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-
-          <article class="skill-card">
-            <span class="skill-index">03 / BUSINESS INTELLIGENCE</span>
-            <h4>Power BI &amp; Reporting</h4>
-            <p>Dashboard development · KPI reporting · DAX · Data modelling</p>
-            <div class="skill-project-links" aria-label="Related projects">
-              <a href="#quickbite-project">QuickBite Express <span aria-hidden="true">↗</span></a>
-              <a href="#election-project">Election Intelligence <span aria-hidden="true">↗</span></a>
-              <a href="#luca-project">LUCA <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-
-          <article class="skill-card">
-            <span class="skill-index">04 / ANALYTICS</span>
-            <h4>Statistics &amp; Visualization</h4>
-            <p>Trend analysis · Correlation · Matplotlib · Seaborn · Plotly</p>
-            <div class="skill-project-links" aria-label="Related projects">
-              <a href="#airpure-project">AirPure Innovations <span aria-hidden="true">↗</span></a>
-              <a href="#election-project">Election Intelligence <span aria-hidden="true">↗</span></a>
-              <a href="#quickbite-project">QuickBite Express <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-
-          <article class="skill-card">
-            <span class="skill-index">05 / PRODUCTIVITY</span>
-            <h4>Excel &amp; Financial Reporting</h4>
-            <p>Advanced Excel · Reconciliation · Data validation · Reporting workflows</p>
-            <div class="skill-project-links" aria-label="Related experience">
-              <a href="#experience">Accounting &amp; reporting experience <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-
-          <article class="skill-card">
-            <span class="skill-index">06 / RESEARCH</span>
-            <h4>Research &amp; Bioinformatics</h4>
-            <p>Reproducible workflows · Cross-study comparison · Research data analysis</p>
-            <div class="skill-project-links" aria-label="Related projects">
-              <a href="#luca-project">LUCA <span aria-hidden="true">↗</span></a>
-              <a href="#jharia-project">Jharia Coal Fire Intelligence <span aria-hidden="true">↗</span></a>
-            </div>
-            <span class="skill-card-note">LUCA is in development; Jharia is planned.</span>
-          </article>
-        </div>
-      </div>
-
-      <div class="education">
-        <div>
-          <span class="eyebrow">EDUCATION</span>
-          <h3>A foundation that connects<br>business and technology.</h3>
-        </div>
-
-        <div>
-          <article>
-            <span>2026–2028</span>
-            <div>
-              <h4>MCA · Machine Learning &amp; AI</h4>
-              <p>Chandigarh University · Pursuing</p>
-            </div>
-          </article>
-
-          <article>
-            <span>2024–2026</span>
-            <div>
-              <h4>M.Com · Accounts &amp; Finance</h4>
-              <p>RSP College, Jharia</p>
-            </div>
-          </article>
-
-          <article>
-            <span>2021–2024</span>
-            <div>
-              <h4>B.Com · Accounts &amp; Finance</h4>
-              <p>Guru Nanak College, Dhanbad</p>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="credentials">
-        <span class="eyebrow">CERTIFICATIONS &amp; COMMUNITY</span>
-
-        <p>
-          HackerRank SQL — Basic, Intermediate &amp; Advanced ·
-          HackerRank Python — Basic ·
-          HackerRank Problem Solving — Basic &amp; Intermediate ·
-          Full Stack Data Analyst — DS Vidya
-        </p>
-
-        <p>
-          Senior NSS Volunteer, 2021–2024: science and technology
-          awareness, digital literacy, and community outreach.
-        </p>
-      </div>
-    </section>
-
-    <section id="approach" class="wrap section approach-section" aria-labelledby="approach-title">
-      <div class="approach-heading">
-        <div>
-          <span class="eyebrow">HOW I APPROACH A PROBLEM</span>
-          <h2 id="approach-title">From Questions to Evidence</h2>
-        </div>
-        <p>A repeatable, evidence-led loop for turning real-world questions into useful analytical decisions.</p>
-      </div>
-
-      <div class="approach-canvas">
-        <div class="approach-loop-label"><span class="approach-live-dot" aria-hidden="true"></span> ITERATIVE BY DESIGN</div>
-        <svg class="approach-orbit" viewBox="0 0 1000 520" role="img" aria-label="A circular workflow connecting Define, Research, Hypothesize, Experiment, Measure, and Learn, returning to Define.">
-          <defs>
-            <marker id="approach-arrow" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
-              <path d="M0,0 L6,3 L0,6 Z" fill="#8ca8d4"/>
-            </marker>
-          </defs>
-          <path class="orbit-base" d="M500 78 C610 75 744 108 795 180 C853 265 795 359 700 402 C610 456 390 456 300 402 C205 359 147 265 205 180 C256 108 390 75 500 78"/>
-          <path class="orbit-direction" d="M500 78 C610 75 744 108 795 180 C853 265 795 359 700 402 C610 456 390 456 300 402 C205 359 147 265 205 180 C256 108 390 75 500 78" marker-end="url(#approach-arrow)"/>
-          <circle class="orbit-runner runner-one" r="7"><animateMotion dur="12s" repeatCount="indefinite" rotate="auto"><mpath href="#approach-path"/></animateMotion></circle>
-          <circle class="orbit-runner runner-two" r="5"><animateMotion dur="12s" begin="-4s" repeatCount="indefinite" rotate="auto"><mpath href="#approach-path"/></animateMotion></circle>
-          <circle class="orbit-runner runner-three" r="4"><animateMotion dur="12s" begin="-8s" repeatCount="indefinite" rotate="auto"><mpath href="#approach-path"/></animateMotion></circle>
-          <path id="approach-path" class="orbit-motion-path" d="M500 78 C610 75 744 108 795 180 C853 265 795 359 700 402 C610 456 390 456 300 402 C205 359 147 265 205 180 C256 108 390 75 500 78"/>
-        </svg>
-
-        <div class="approach-node node-define"><span>01</span><strong>Define</strong><small>Frame the problem</small></div>
-        <div class="approach-node node-research"><span>02</span><strong>Research</strong><small>Understand the context</small></div>
-        <div class="approach-node node-hypothesis"><span>03</span><strong>Hypothesize</strong><small>Make it testable</small></div>
-        <div class="approach-node node-experiment"><span>04</span><strong>Experiment</strong><small>Test with data</small></div>
-        <div class="approach-node node-measure"><span>05</span><strong>Measure</strong><small>Evaluate the evidence</small></div>
-        <div class="approach-node node-learn"><span>06</span><strong>Learn</strong><small>Refine and repeat</small></div>
-      </div>
-      <p class="approach-footnote">The loop continues: every finding can sharpen the next question. <span>Evidence first. Conclusions after validation.</span></p>
-    </section>
-
-        <section id="writing" class="wrap section writing">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">04 / TECHNICAL WRITING</span>
-          <h2>Learning, out loud.</h2>
-          <p class="writing-intro">Practical notes on SQL, Python, and the details that make analytics more reliable.</p>
-        </div>
-        <a class="underlink" href="https://medium.com/@codecosmosbynav" target="_blank" rel="noopener noreferrer">All articles on Medium ↗</a>
-      </div>
-
-      <div class="article-grid">
-        <a class="article-card featured-article" href="https://medium.com/@codecosmosbynav/whatsapp-bug-removes-python-underscores-how-a-hidden-formatting-issue-breaks-your-code-e352fdceda61" target="_blank" rel="noopener noreferrer">
-          <div class="article-card-top"><span class="article-number">01</span><span class="article-badge">FEATURED · PYTHON</span></div>
-          <div><h3>WhatsApp Python Underscore Bug</h3><p>How a hidden formatting issue can remove underscores and break your code.</p></div>
-          <span class="article-card-footer">READ FEATURED ARTICLE <span aria-hidden="true">↗</span></span>
-        </a>
-
-        <a class="article-card featured-article" href="https://medium.com/@codecosmosbynav/10-pandas-tricks-that-saved-my-data-analyst-job-0fe0620d421f" target="_blank" rel="noopener noreferrer">
-          <div class="article-card-top"><span class="article-number">02</span><span class="article-badge">FEATURED · PANDAS</span></div>
-          <div><h3>10 Pandas Tricks</h3><p>Practical Pandas techniques that make everyday data analysis faster and more effective.</p></div>
-          <span class="article-card-footer">READ FEATURED ARTICLE <span aria-hidden="true">↗</span></span>
-        </a>
-
-        <a class="article-card latest-article" href="https://medium.com/@codecosmosbynav" target="_blank" rel="noopener noreferrer" id="medium-latest-card" aria-live="polite">
-          <div class="article-card-top"><span class="article-number">03</span><span class="article-badge">LATEST ARTICLE</span></div>
-          <div><h3 id="medium-latest-title">Latest from Code Cosmos by Nav</h3><p id="medium-latest-description">The latest non-featured article from Code Cosmos by Nav will appear here. Browse all articles on Medium.</p></div>
-          <div class="latest-article-image-wrap" id="medium-latest-image-wrap" hidden><img id="medium-latest-image" alt="" loading="lazy"></div>
-          <span class="article-card-footer"><span id="medium-latest-date">LATEST ON MEDIUM</span><span aria-hidden="true">↗</span></span>
-        </a>
-      </div>
-      <noscript><p class="writing-note">The latest article is refreshed automatically by the site's scheduled feed update.</p></noscript>
-    </section>
-
-    <script>
-      (async function loadLatestMediumArticle() {
-        const card = document.getElementById("medium-latest-card");
-        const title = document.getElementById("medium-latest-title");
-        const description = document.getElementById("medium-latest-description");
-        const date = document.getElementById("medium-latest-date");
-        const image = document.getElementById("medium-latest-image");
-        const imageWrap = document.getElementById("medium-latest-image-wrap");
-        try {
-          const response = await fetch("latest-medium.json", { cache: "no-store" });
-          if (!response.ok) throw new Error("Medium feed data is unavailable");
-          const article = await response.json();
-          if (!article || !article.title || !article.link) throw new Error("Medium feed data is incomplete");
-          const articleUrl = new URL(article.link);
-          if (articleUrl.protocol !== "https:" || !(articleUrl.hostname === "medium.com" || articleUrl.hostname.endsWith(".medium.com"))) {
-            throw new Error("Unexpected article destination");
-          }
-          title.textContent = article.title;
-          description.textContent = article.description || "Read the latest article on Code Cosmos by Nav.";
-          const published = article.pubDate ? new Date(article.pubDate) : null;
-          date.textContent = published && !Number.isNaN(published.getTime())
-            ? published.toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "numeric" })
-            : "LATEST ON MEDIUM";
-          card.href = articleUrl.href;
-          card.setAttribute("aria-label", "Read latest Medium article: " + article.title);
-          if (article.thumbnail && /^https:\/\//i.test(article.thumbnail)) {
-            image.src = article.thumbnail;
-            image.alt = article.title;
-            imageWrap.hidden = false;
-          } else {
-            image.removeAttribute("src");
-            image.alt = "";
-            imageWrap.hidden = true;
-          }
-        } catch (error) {
-          title.textContent = "Explore the latest on Medium";
-          description.textContent = "The automatic article feed is temporarily unavailable. Browse all published articles on Code Cosmos by Nav.";
-          date.textContent = "VIEW MEDIUM PROFILE";
-          card.href = "https://medium.com/@codecosmosbynav";
-          card.setAttribute("aria-label", "Browse all articles on Medium");
-          imageWrap.hidden = true;
-        }
-      })();
-    </script>
-
-    <section id="contact" class="contact-section">
-      <div class="wrap">
-        <div class="contact-grid">
-          <div>
-            <span class="eyebrow">05 / LET’S CONNECT</span>
-
-            <h2>
-              A good project starts<br>
-              with a conversation<span>.</span>
-            </h2>
-
-            <p>
-              For data analyst roles, freelance analytics projects,
-              or research collaborations, get in touch.
-            </p>
-
-            <a class="button" href="mailto:navjotaroundai@gmail.com">
-              Start a conversation ↗
-            </a>
-          </div>
-
-          <div class="contact-details">
-            <div>
-              <span>EMAIL</span>
-              <a href="mailto:navjotaroundai@gmail.com">
-                navjotaroundai@gmail.com
-              </a>
-            </div>
-
-            <div>
-              <span>PHONE</span>
-              <a href="tel:+917070152218">+91 7070152218</a>
-            </div>
-
-            <div>
-              <span>BASED IN</span>
-              <p>Dhanbad, Jharkhand, India</p>
-            </div>
-
-            <div class="resume-links">
-              <span>RÉSUMÉ</span>
-
-              <a href="Navjot-Singh-Resume.pdf" download>
-                Download PDF ↓
-              </a>
-
-              <a
-                href="Navjot-Singh-Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View in browser ↗
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <footer>
-          <a class="brand" href="#">nav<span>.</span></a>
-          <span>© 2026 Navjot Singh</span>
-
-          <div>
-            <a
-              href="https://www.linkedin.com/in/navjot-singh-068a52233"
-              target="_blank"
-              rel="noopener noreferrer"
-            >LinkedIn ↗</a>
-
-            <a
-              href="https://github.com/codernav01"
-              target="_blank"
-              rel="noopener noreferrer"
-            >GitHub ↗</a>
-
-            <a
-              href="https://medium.com/@codecosmosbynav"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Medium ↗</a>
-
-            <a
-              href="https://www.quora.com/profile/Navjot-Singh-3613"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Quora ↗</a>
-          </div>
-        </footer>
-      </div>
-    </section>
-  </main>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+  <a class="brand" href="#top" aria-label="Navjot Singh home">nav<span>.</span></a>
+  <nav aria-label="Main navigation">
+    <a href="#work">Work</a><a href="#dashboards">Dashboards</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#writing">Writing</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="header-resume" href="Navjot-Singh-Resume.pdf" target="_blank" rel="noopener">Resume <span>↗</span></a>
+</header>
+<main id="main">
+<section class="hero section-wrap" id="top">
+  <div class="hero-copy">
+    <div class="availability"><i></i> DATA ANALYST <b>·</b> BUSINESS INTELLIGENCE <b>·</b> RESEARCH</div>
+    <p class="hero-kicker">HELLO, I'M NAVJOT SINGH</p>
+    <h1>I turn business data into <em>clear decisions.</em></h1>
+    <p class="hero-lead">Data Analyst Associate at DS Vidya, combining a finance foundation with Python, SQL and Power BI to investigate business problems, build reliable analysis and communicate what the data actually says.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#work">Explore my work <span>↘</span></a><a class="btn btn-quiet" href="Navjot-Singh-Resume.pdf" target="_blank" rel="noopener">View résumé <span>↗</span></a></div>
+    <div class="hero-proof"><div><strong>Python + SQL</strong><span>ANALYTICS TOOLKIT</span></div><div><strong>Power BI</strong><span>BUSINESS INTELLIGENCE</span></div><div><strong>Finance → Data</strong><span>BUSINESS CONTEXT</span></div></div>
+  </div>
+  <div class="hero-visual">
+    <div class="portrait-frame"><img src="navjot-singh-portrait.jpeg" alt="Portrait of Navjot Singh" width="998" height="1139" fetchpriority="high"></div>
+    <div class="portrait-note"><span>BASED IN</span><strong>Dhanbad, India</strong><span class="note-mark">NS / 2026</span></div>
+    <div class="hero-stamp">DATA<br>WITH<br>PURPOSE<span>✳</span></div>
+  </div>
+</section>
+<div class="ticker" aria-label="Areas of focus"><div>BUSINESS INTELLIGENCE <i>✳</i> DATA ANALYSIS <i>✳</i> PYTHON <i>✳</i> SQL <i>✳</i> POWER BI <i>✳</i> APPLIED RESEARCH <i>✳</i> BUSINESS INTELLIGENCE <i>✳</i> DATA ANALYSIS <i>✳</i> PYTHON <i>✳</i> SQL <i>✳</i> POWER BI <i>✳</i> APPLIED RESEARCH <i>✳</i></div></div>
+
+<section class="section-wrap section-block" id="work">
+  <div class="section-top"><div><p class="eyebrow">01 / SELECTED PROJECTS</p><h2>Work that starts<br>with a <em>real question.</em></h2></div><p class="section-intro">Case studies across operations, public data and environmental analytics. Each project is framed around the problem, analytical approach and decision relevance.</p></div>
+  <article class="case-card case-featured" id="quickbite-project">
+    <div class="case-main"><div class="case-topline"><span>01 — BUSINESS INTELLIGENCE</span><span class="case-type">FEATURED CASE STUDY</span></div><h3>QuickBite Express</h3><p class="case-subtitle">Crisis Recovery & Business Intelligence</p><p class="case-question">How did the June 2025 crisis affect delivery operations—and where should recovery efforts begin?</p><div class="case-tools"><span>Python</span><span>MySQL</span><span>Power BI</span><span>8 relational datasets</span></div><a class="text-link" href="https://github.com/codernav01/QuickBite-Crisis-Recovery-Analytics" target="_blank" rel="noopener noreferrer">Explore case study on GitHub <b>↗</b></a></div>
+    <div class="case-insight insight-lime"><span class="insight-label">PRE-CRISIS VS CRISIS · 2025</span><div class="big-metrics"><div><strong>−69.78<small>%</small></strong><span>ORDER VOLUME</span></div><div><strong>+52.09<small>%</small></strong><span>AVERAGE DELIVERY TIME</span></div></div><p>Performance comparison exposed a sharp demand decline and slower fulfilment, helping focus analysis on operational breakdowns, SLA breaches and customer risk.</p><details><summary>Read analytical approach <b>＋</b></summary><p>Compared pre-crisis and crisis performance across orders, delivery times, cancellations, SLA breaches and high-value customer risk using Python, MySQL and Power BI. The project includes relational data validation and an analytics layer for business reporting.</p></details></div>
+  </article>
+  <article class="case-card" id="election-project">
+    <div class="case-main"><div class="case-topline"><span>02 — PUBLIC-DOMAIN ANALYTICS</span><span class="case-type">FEATURED CASE STUDY</span></div><h3>Election Intelligence</h3><p class="case-subtitle">Tamil Nadu Assembly Elections</p><p class="case-question">What changed across constituencies, winners and party vote-share patterns between election cycles?</p><div class="case-tools"><span>Python</span><span>MySQL</span><span>Power BI</span><span>3 datasets</span></div><a class="text-link" href="https://github.com/codernav01/Election-Intelligence-Analytics" target="_blank" rel="noopener noreferrer">Explore case study on GitHub <b>↗</b></a></div>
+    <div class="case-insight insight-blue"><span class="insight-label">ANALYSIS LENSES</span><div class="election-years"><strong>2021</strong><span>→</span><strong>2026</strong></div><div class="insight-chips"><span>Regional shifts</span><span>Winner flips</span><span>Vote share</span><span>Constituency margins</span></div><p>Three datasets connected into a comparative workflow to examine geographic patterns, constituency flips and vote-share movement.</p><details><summary>Read analytical approach <b>＋</b></summary><p>Used SQL joins, CTEs, window functions and Python analysis to compare constituency-level outcomes. The work emphasizes three focused stories: geographic patterns, winner flips and victory margins, communicated through BI storytelling.</p></details></div>
+  </article>
+  <article class="case-card" id="airpure-project">
+    <div class="case-main"><div class="case-topline"><span>03 — ENVIRONMENT & MARKET ANALYSIS</span><span class="case-type">FEATURED CASE STUDY</span></div><h3>AirPure Innovations</h3><p class="case-subtitle">Air Pollution Business Intelligence</p><p class="case-question">How can pollution, health and demographic indicators inform an evidence-led market opportunity assessment?</p><div class="case-tools"><span>Python</span><span>Pandas</span><span>EDA</span><span>Statistics</span></div><a class="text-link" href="https://github.com/codernav01/Airpure-Business-Intelligence-Analysis" target="_blank" rel="noopener noreferrer">Explore case study on GitHub <b>↗</b></a></div>
+    <div class="case-insight insight-sand"><span class="insight-label">CONNECTED DATA DOMAINS</span><div class="domain-grid"><div><b>01</b><strong>Air quality</strong></div><div><b>02</b><strong>Health</strong></div><div><b>03</b><strong>Vehicle growth</strong></div><div><b>04</b><strong>Population</strong></div></div><p>Four datasets brought together to investigate pollution hotspots, seasonal patterns and potential demand drivers.</p><details><summary>Read analytical approach <b>＋</b></summary><p>Integrated four datasets with Python and Pandas for cleaning, exploratory analysis, correlation and severity analysis. Associations are treated as associations—not proof of causation.</p></details></div>
+  </article>
+  <article class="case-card case-compact" id="luca-project">
+    <div class="case-main"><div class="case-topline"><span>04 — BIOINFORMATICS</span><span class="case-type case-progress">IN DEVELOPMENT</span></div><h3>LUCA</h3><p class="case-subtitle">Last Universal Common Ancestor</p><p class="case-question">Where do independent reconstructions agree, and what can those patterns tell us about ancestral biology?</p><div class="case-tools"><span>Python / Pandas</span><span>SQL</span><span>Power BI</span></div><span class="text-link muted-link">Research workflow in development</span></div>
+    <div class="case-insight insight-violet"><span class="insight-label">RESEARCH QUESTIONS</span><ul class="question-list"><li>Protein consensus across studies</li><li>Metabolic pathway completeness</li><li>Cross-study agreement and divergence</li></ul><p>Building a reproducible analytical layer across LUCA reconstruction datasets. Results are not yet final.</p></div>
+  </article>
+  <div class="all-work"><span>More notebooks, experiments and source code</span><a class="text-link" href="https://github.com/codernav01" target="_blank" rel="noopener noreferrer">Browse all GitHub repositories ↗</a></div>
+</section>
+
+<section class="dashboard-section" id="dashboards">
+ <div class="section-wrap">
+  <div class="section-top"><div><p class="eyebrow">02 / ANALYTICS IN VIEW</p><h2>From raw tables<br>to <em>visual signals.</em></h2></div><p class="section-intro">A preview of the analytical questions behind the featured work. These are portfolio-built visual summaries, not screenshots exported from Power BI Desktop.</p></div>
+  <div class="dashboard-grid">
+   <article class="dashboard-card"><div class="dash-head"><div><span>QUICKBITE EXPRESS / OPERATIONS</span><h3>Service performance</h3></div><span class="dash-icon">↗</span></div><div class="dash-kpis"><div><small>ORDER VOLUME</small><strong>−69.78%</strong><em>Pre-crisis vs crisis</em></div><div><small>DELIVERY TIME</small><strong>+52.09%</strong><em>Pre-crisis vs crisis</em></div></div><div class="mini-chart" aria-label="Illustrative comparison of order volume before and during the crisis"><div class="chart-bars"><i style="height:88%"></i><i style="height:27%"></i><i style="height:66%"></i><i style="height:38%"></i><i style="height:54%"></i><i style="height:31%"></i></div><div class="chart-axis"><span>BASELINE</span><span>CRISIS PERIOD</span></div></div><a href="https://github.com/codernav01/QuickBite-Crisis-Recovery-Analytics" target="_blank" rel="noopener noreferrer">Open project repository ↗</a></article>
+   <article class="dashboard-card"><div class="dash-head"><div><span>ELECTION INTELLIGENCE / CONSTITUENCIES</span><h3>Electoral comparison</h3></div><span class="dash-icon">↗</span></div><div class="election-visual"><div class="election-ring"><span>2021<br><b>→</b><br>2026</span></div><div class="legend"><p><i></i>Regional shifts</p><p><i></i>Winner flips</p><p><i></i>Victory margins</p><p><i></i>Vote share</p></div></div><p class="dash-caption">Comparative analysis across constituency-level records.</p><a href="https://github.com/codernav01/Election-Intelligence-Analytics" target="_blank" rel="noopener noreferrer">Open project repository ↗</a></article>
+   <article class="dashboard-card"><div class="dash-head"><div><span>AIRPURE / ENVIRONMENT</span><h3>Pollution & demand context</h3></div><span class="dash-icon">↗</span></div><div class="air-bars"><div><span>Air quality</span><i style="--v:92%"></i></div><div><span>Health indicators</span><i style="--v:72%"></i></div><div><span>Vehicle growth</span><i style="--v:63%"></i></div><div><span>Population</span><i style="--v:81%"></i></div></div><p class="dash-caption">Four connected data domains for exploratory analysis. Bar lengths are visual decoration, not measured values.</p><a href="https://github.com/codernav01/Airpure-Business-Intelligence-Analysis" target="_blank" rel="noopener noreferrer">Open project repository ↗</a></article>
+  </div>
+  <p class="dashboard-note"><span>NOTE</span> Power BI report screenshots and live report links are not included yet because no published dashboard URLs or screenshot files were available in the repository. The links above open the project source code.</p>
+ </div>
+</section>
+
+<section class="section-wrap section-block" id="about">
+ <div class="section-top"><div><p class="eyebrow">03 / PROFILE & EXPERIENCE</p><h2>Business context.<br><em>Analytical discipline.</em></h2></div><p class="section-intro">A commerce and finance foundation, now applied to data analysis, business intelligence and research-led problem solving.</p></div>
+ <div class="about-layout">
+  <div class="about-copy"><p class="about-lead">I’m Navjot Singh, a Data Analyst Associate and Research Scholar based in Dhanbad, India.</p><p>My foundation in commerce and financial reporting shapes how I approach analytics: validate the numbers, understand the business context, and make conclusions useful to the people making decisions.</p><p>I’m pursuing an MCA in Machine Learning & AI at Chandigarh University, while building practical work across operations, public data, environmental analysis and bioinformatics.</p><p>I also publish practical notes through <a href="https://medium.com/@codecosmosbynav" target="_blank" rel="noopener noreferrer">Code Cosmos by Nav</a>.</p><div class="about-links"><a href="Navjot-Singh-Resume.pdf" target="_blank" rel="noopener">View full résumé ↗</a><a href="https://www.linkedin.com/in/navjot-singh-068a52233/" target="_blank" rel="noopener noreferrer">LinkedIn profile ↗</a></div></div>
+  <div class="timeline"><div class="timeline-heading"><span>CAREER TIMELINE</span><span>2025 — PRESENT</span></div>
+   <article class="timeline-item current"><span class="timeline-date">SEP 2026 — PRESENT</span><div><h3>Data Analyst Associate</h3><p class="timeline-org">DS Vidya · Data Analytics & Reporting</p><p>Data cleaning, analysis and validation using Python and SQL; KPI reporting, dashboard development and documentation of analytical workflows.</p></div></article>
+   <article class="timeline-item"><span class="timeline-date">AUG 2025 — AUG 2026</span><div><h3>Research Scholar</h3><p class="timeline-org">DS Vidya · Data Science & AI Hub</p><p>Reported experience includes analysis of 20,000+ records, a 35% improvement in reporting efficiency and a 15% improvement in data-processing efficiency through workflow optimization.</p><div class="timeline-metrics"><span><b>20,000+</b> records analyzed</span><span><b>35%</b> reporting efficiency improvement</span><span><b>15%</b> processing efficiency improvement</span></div></div></article>
+   <article class="timeline-item"><span class="timeline-date">JAN — JUN 2025</span><div><h3>Accounting Intern</h3><p class="timeline-org">Gara Industries · Finance & Reporting</p><p>Audited 500+ financial records and prepared reconciliation reports; reported a 20% reduction in reporting errors.</p><div class="timeline-metrics"><span><b>500+</b> records audited</span><span><b>20%</b> fewer reporting errors</span></div></div></article>
+  </div>
+ </div>
+ <div class="education-strip"><div><span>EDUCATION</span><strong>Commerce to computing</strong></div><div><b>2026–2028</b><strong>MCA · Machine Learning & AI</strong><small>Chandigarh University · Pursuing</small></div><div><b>2024–2026</b><strong>M.Com · Accounts & Finance</strong><small>RSP College, Jharia</small></div><div><b>2021–2024</b><strong>B.Com · Accounts & Finance</strong><small>Guru Nanak College, Dhanbad</small></div></div>
+</section>
+
+<section class="skills-section" id="skills"><div class="section-wrap">
+ <div class="section-top"><div><p class="eyebrow">04 / TECHNICAL TOOLKIT</p><h2>Tools with a <em>job to do.</em></h2></div><p class="section-intro">Organized by how the tools contribute to an analytics workflow—not just a list of keywords.</p></div>
+ <div class="skills-grid">
+  <article class="skill-group"><span>01 / PROGRAMMING</span><h3>Python & data wrangling</h3><p>Cleaning, transformation, exploratory analysis and feature preparation.</p><div class="skill-pills"><i>Python</i><i>Pandas</i><i>NumPy</i><i>Jupyter</i></div></article>
+  <article class="skill-group"><span>02 / DATABASES</span><h3>SQL & data management</h3><p>Querying, relational data modelling, validation and analytical datasets.</p><div class="skill-pills"><i>MySQL</i><i>PostgreSQL</i><i>Joins</i><i>CTEs</i><i>Window functions</i></div></article>
+  <article class="skill-group"><span>03 / BUSINESS INTELLIGENCE</span><h3>Power BI & reporting</h3><p>Turning analysis into KPI views and stakeholder-ready reporting.</p><div class="skill-pills"><i>Power BI</i><i>DAX</i><i>Data modelling</i><i>Dashboards</i></div></article>
+  <article class="skill-group"><span>04 / ANALYTICS</span><h3>Statistics & visualization</h3><p>Exploring distributions, trends, relationships and performance patterns.</p><div class="skill-pills"><i>EDA</i><i>Matplotlib</i><i>Seaborn</i><i>Plotly</i><i>Correlation</i></div></article>
+  <article class="skill-group"><span>05 / BUSINESS OPERATIONS</span><h3>Excel & financial reporting</h3><p>Reconciliation, data checks and structured reporting workflows.</p><div class="skill-pills"><i>Advanced Excel</i><i>Reconciliation</i><i>Data validation</i><i>KPI reporting</i></div></article>
+  <article class="skill-group"><span>06 / RESEARCH</span><h3>Applied ML & research</h3><p>Developing reproducible analysis and decision-support research workflows.</p><div class="skill-pills"><i>Scikit-learn</i><i>Feature engineering</i><i>Research analysis</i><i>Bioinformatics</i></div></article>
+ </div>
+ <div class="credentials"><div><span>CERTIFICATIONS</span><p>HackerRank SQL — Basic, Intermediate & Advanced · HackerRank Python — Basic · HackerRank Problem Solving — Basic & Intermediate · Full Stack Data Analyst — DS Vidya</p></div><div><span>COMMUNITY</span><p>Senior NSS Volunteer, 2021–2024 — science and technology awareness, digital literacy and community outreach.</p></div></div>
+</div></section>
+
+<section class="section-wrap section-block research-block">
+ <div class="section-top"><div><p class="eyebrow">05 / RESEARCH & UPCOMING WORK</p><h2>Questions still<br><em>being investigated.</em></h2></div><p class="section-intro">Work in progress is labelled honestly. Planned projects are not presented as completed results.</p></div>
+ <div class="research-grid"><article><span class="work-status">RESEARCH IN PROGRESS</span><h3>Trustworthy AI for Financial Fraud Detection</h3><p>An explainable decision-support framework exploring calibrated fraud-risk predictions, feature-level explanations and practical risk categories. Experiments and conclusions are being refined.</p><div class="case-tools"><span>Explainable AI</span><span>Fraud detection</span><span>Model calibration</span></div><a class="text-link" href="assets/research-fraud-detection.svg" target="_blank" rel="noopener">View research concept visual ↗</a></article><article><span class="work-status planned">PLANNED PROJECT</span><h3>Jharia Coal Fire Intelligence</h3><p>Planned exploration of satellite observations and analytics to investigate coal-fire patterns in Jharia through data preparation, spatial and temporal analysis, and a monitoring dashboard.</p><div class="case-tools"><span>Satellite data</span><span>Spatial analysis</span><span>Monitoring</span></div></article></div>
+</section>
+
+<section class="section-wrap section-block writing-block" id="writing">
+ <div class="section-top"><div><p class="eyebrow">06 / TECHNICAL WRITING</p><h2>Learning, <em>out loud.</em></h2></div><p class="section-intro">Practical notes on SQL, Python and the details that make analytics more reliable.</p></div>
+ <div class="writing-grid">
+  <a href="https://medium.com/@codecosmosbynav/whatsapp-bug-removes-python-underscores-how-a-hidden-formatting-issue-breaks-your-code-e352fdceda61" target="_blank" rel="noopener noreferrer"><span>01 / PYTHON</span><h3>WhatsApp Python Underscore Bug</h3><p>How a hidden formatting issue can remove underscores and break your code.</p><b>READ ARTICLE ↗</b></a>
+  <a href="https://medium.com/@codecosmosbynav/10-pandas-tricks-that-saved-my-data-analyst-job-0fe0620d421f" target="_blank" rel="noopener noreferrer"><span>02 / PANDAS</span><h3>10 Pandas Tricks</h3><p>Practical techniques that make everyday data analysis faster and more effective.</p><b>READ ARTICLE ↗</b></a>
+  <a id="medium-latest-card" href="https://medium.com/@codecosmosbynav" target="_blank" rel="noopener noreferrer"><span>03 / LATEST ARTICLE</span><h3 id="medium-latest-title">Latest from Code Cosmos by Nav</h3><p id="medium-latest-description">Browse the latest practical notes and articles on Medium.</p><b id="medium-latest-date">VISIT MEDIUM ↗</b></a>
+ </div>
+ <p class="feed-note">The latest article card refreshes from the site's scheduled Medium feed when available.</p>
+</section>
+<script>
+(async function(){const card=document.getElementById("medium-latest-card");try{const r=await fetch("latest-medium.json",{cache:"no-store"});if(!r.ok)throw Error();const a=await r.json();const u=new URL(a.link);if(!a.title||u.protocol!=="https:"||!(u.hostname==="medium.com"||u.hostname.endsWith(".medium.com")))throw Error();document.getElementById("medium-latest-title").textContent=a.title;document.getElementById("medium-latest-description").textContent=a.description||"Read the latest article on Code Cosmos by Nav.";document.getElementById("medium-latest-date").textContent=a.pubDate?new Date(a.pubDate).toLocaleDateString("en-IN",{year:"numeric",month:"short",day:"numeric"}):"READ ON MEDIUM";card.href=u.href;}catch(e){document.getElementById("medium-latest-title").textContent="Explore all articles on Medium";document.getElementById("medium-latest-description").textContent="Browse practical notes on SQL, Python and data analytics.";document.getElementById("medium-latest-date").textContent="VISIT MEDIUM ↗";card.href="https://medium.com/@codecosmosbynav";}})();
+</script>
+
+<section class="contact-section" id="contact"><div class="section-wrap contact-layout"><div><p class="eyebrow">07 / RECRUITER & COLLABORATION DESK</p><h2>Have a data problem?<br><em>Let’s talk.</em></h2><p class="contact-lead">Open to Data Analyst and Business Intelligence opportunities, freelance analytics work and research collaborations.</p><a class="btn btn-primary" href="mailto:navjotaroundai@gmail.com?subject=Opportunity%20or%20Project%20Discussion">Email Navjot <span>↗</span></a></div><div class="recruiter-panel"><div class="recruiter-links"><a href="Navjot-Singh-Resume.pdf" target="_blank" rel="noopener"><span>01</span><div><b>Résumé</b><small>Open the one-page PDF</small></div><strong>↗</strong></a><a href="https://www.linkedin.com/in/navjot-singh-068a52233/" target="_blank" rel="noopener noreferrer"><span>02</span><div><b>LinkedIn</b><small>Professional profile</small></div><strong>↗</strong></a><a href="https://github.com/codernav01" target="_blank" rel="noopener noreferrer"><span>03</span><div><b>GitHub</b><small>Projects and source code</small></div><strong>↗</strong></a><a href="mailto:navjotaroundai@gmail.com"><span>04</span><div><b>Email</b><small>navjotaroundai@gmail.com</small></div><strong>↗</strong></a><a href="tel:+917070152218"><span>05</span><div><b>Phone</b><small>+91 7070152218</small></div><strong>↗</strong></a></div><p class="location-line">BASED IN DHANBAD, JHARKHAND, INDIA</p></div></div>
+<footer class="section-wrap footer"><a class="brand" href="#top">nav<span>.</span></a><span>© 2026 Navjot Singh</span><div><a href="https://www.linkedin.com/in/navjot-singh-068a52233/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/codernav01" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://medium.com/@codecosmosbynav" target="_blank" rel="noopener noreferrer">Medium</a><a href="https://www.quora.com/profile/Navjot-Singh-3613" target="_blank" rel="noopener noreferrer">Quora</a></div></footer></section>
+</main>
 </body>
 </html>
