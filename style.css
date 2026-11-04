@@ -183,3 +183,13 @@
  .approach-footnote{display:block}.approach-footnote span{display:block;margin-top:5px}
 }
 @media(prefers-reduced-motion:reduce){.approach-live-dot{animation:none}.orbit-runner{display:none}}
+
+/* Final navigation and accessibility refinements */
+@media(max-width:680px){
+  nav{flex-wrap:wrap;justify-content:flex-start;row-gap:8px}
+  nav a{padding:3px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .approach-orbit animateMotion,.orbit-runner{animation:none!important}
+  .skill-card,.article-card{transition:none!important}
+}
