@@ -1,9 +1,7 @@
 name: Import Portfolio
 
 on:
-  push:
-    paths:
-      - ".github/workflows/import-portfolio.yml"
+  # Manual only: never overwrite the live portfolio as a side effect of editing this workflow.
   workflow_dispatch:
 
 permissions:
@@ -34,7 +32,9 @@ jobs:
           assert "QuickBite Express" in html, "Portfolio download failed"
           assert "navjotaroundai@gmail.com" in html, "Unexpected page downloaded"
           assert "--bg" in Path("style.css").read_text(), "Stylesheet download failed"
-          assert Path("Navjot-Singh-Resume.pdf").read_bytes().startswith(b"%PDF-"), "Resume download failed"
+          resume = Path("Navjot-Singh-Resume.pdf").read_bytes()
+          assert resume.startswith(b"%PDF-"), "Resume download failed: invalid PDF signature"
+          assert len(resume) >= 10_000, f"Resume download failed: file is suspiciously small ({len(resume)} bytes)"
           PY
 
           touch .nojekyll
