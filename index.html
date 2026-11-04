@@ -3,10 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Navjot Singh — Data Analyst and Research Scholar. Explore business intelligence and bioinformatics projects, experience, technical writing, and résumé.">
+  <meta name="description" content="Navjot Singh is a Data Analyst and Research Scholar working with Python, SQL, Power BI, business intelligence, and applied analytics. Explore projects, experience, research, and technical writing.">
   <meta name="theme-color" content="#101214">
+  <meta name="author" content="Navjot Singh">
+  <link rel="canonical" href="https://codernav01.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Navjot Singh | Data Analyst &amp; Research Scholar">
+  <meta property="og:description" content="Projects and practical work across Python, SQL, Power BI, business intelligence, and applied analytics.">
+  <meta property="og:url" content="https://codernav01.github.io/">
+  <meta property="og:image" content="https://codernav01.github.io/navjot-singh-portrait.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Navjot Singh | Data Analyst &amp; Research Scholar">
+  <meta name="twitter:description" content="Explore analytics projects, research, technical writing, and experience.">
+  <meta name="twitter:image" content="https://codernav01.github.io/navjot-singh-portrait.jpeg">
 
-  <title>Navjot Singh | Data Analytics, BI & Research</title>
+  <title>Navjot Singh | Data Analyst, BI &amp; Research</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Navjot Singh",
+    "url": "https://codernav01.github.io/",
+    "jobTitle": "Data Analyst",
+    "email": "mailto:navjotaroundai@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/navjot-singh-068a52233/",
+      "https://github.com/codernav01",
+      "https://medium.com/@codecosmosbynav",
+      "https://www.quora.com/profile/Navjot-Singh-3613"
+    ]
+  }
+  </script>
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23c5d3ff'/%3E%3Cpath d='M11 29V11h4l10 12V11h4v18h-4L15 17v12z' fill='%23101214'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
@@ -136,6 +163,7 @@
       <a href="#about">About</a>
       <a href="#upcoming">Upcoming</a>
       <a href="#skills">Skills</a>
+      <a href="#writing">Writing</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -845,9 +873,9 @@
 
         <a class="article-card latest-article" href="https://medium.com/@codecosmosbynav" target="_blank" rel="noopener noreferrer" id="medium-latest-card" aria-live="polite">
           <div class="article-card-top"><span class="article-number">03</span><span class="article-badge">LATEST ARTICLE</span></div>
-          <div><h3 id="medium-latest-title">Latest from Code Cosmos by Nav</h3><p id="medium-latest-description">Your newest non-featured Medium article will appear here automatically.</p></div>
+          <div><h3 id="medium-latest-title">Latest from Code Cosmos by Nav</h3><p id="medium-latest-description">The latest non-featured article from Code Cosmos by Nav will appear here. Browse all articles on Medium.</p></div>
           <div class="latest-article-image-wrap" id="medium-latest-image-wrap" hidden><img id="medium-latest-image" alt="" loading="lazy"></div>
-          <span class="article-card-footer"><span id="medium-latest-date">UPDATED AUTOMATICALLY</span><span aria-hidden="true">↗</span></span>
+          <span class="article-card-footer"><span id="medium-latest-date">LATEST ON MEDIUM</span><span aria-hidden="true">↗</span></span>
         </a>
       </div>
       <noscript><p class="writing-note">The latest article is refreshed automatically by the site's scheduled feed update.</p></noscript>
@@ -856,27 +884,44 @@
     <script>
       (async function loadLatestMediumArticle() {
         const card = document.getElementById("medium-latest-card");
+        const title = document.getElementById("medium-latest-title");
+        const description = document.getElementById("medium-latest-description");
+        const date = document.getElementById("medium-latest-date");
+        const image = document.getElementById("medium-latest-image");
+        const imageWrap = document.getElementById("medium-latest-image-wrap");
         try {
-          const response = await fetch("latest-medium.json?cache=" + Date.now(), { cache: "no-store" });
-          if (!response.ok) return;
+          const response = await fetch("latest-medium.json", { cache: "no-store" });
+          if (!response.ok) throw new Error("Medium feed data is unavailable");
           const article = await response.json();
-          if (!article || !article.title || !article.link) return;
-          document.getElementById("medium-latest-title").textContent = article.title;
-          document.getElementById("medium-latest-description").textContent = article.description || "Read the latest article on Code Cosmos by Nav.";
-          document.getElementById("medium-latest-date").textContent = article.pubDate ? new Date(article.pubDate).toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "numeric" }) : "LATEST ON MEDIUM";
-          card.href = article.link;
+          if (!article || !article.title || !article.link) throw new Error("Medium feed data is incomplete");
+          const articleUrl = new URL(article.link);
+          if (articleUrl.protocol !== "https:" || !(articleUrl.hostname === "medium.com" || articleUrl.hostname.endsWith(".medium.com"))) {
+            throw new Error("Unexpected article destination");
+          }
+          title.textContent = article.title;
+          description.textContent = article.description || "Read the latest article on Code Cosmos by Nav.";
+          const published = article.pubDate ? new Date(article.pubDate) : null;
+          date.textContent = published && !Number.isNaN(published.getTime())
+            ? published.toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "numeric" })
+            : "LATEST ON MEDIUM";
+          card.href = articleUrl.href;
           card.setAttribute("aria-label", "Read latest Medium article: " + article.title);
-          const image = document.getElementById("medium-latest-image");
-          const imageWrap = document.getElementById("medium-latest-image-wrap");
-          if (article.thumbnail) {
+          if (article.thumbnail && /^https:\/\//i.test(article.thumbnail)) {
             image.src = article.thumbnail;
             image.alt = article.title;
             imageWrap.hidden = false;
           } else {
+            image.removeAttribute("src");
+            image.alt = "";
             imageWrap.hidden = true;
           }
         } catch (error) {
-          // Keep the last successfully committed feed data if the network request fails.
+          title.textContent = "Explore the latest on Medium";
+          description.textContent = "The automatic article feed is temporarily unavailable. Browse all published articles on Code Cosmos by Nav.";
+          date.textContent = "VIEW MEDIUM PROFILE";
+          card.href = "https://medium.com/@codecosmosbynav";
+          card.setAttribute("aria-label", "Browse all articles on Medium");
+          imageWrap.hidden = true;
         }
       })();
     </script>
